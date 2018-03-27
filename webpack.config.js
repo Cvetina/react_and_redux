@@ -1,11 +1,21 @@
 const path = require('path');
 
 const HTMLWebpackPlugin =  require('html-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-var ExtractTextPluginStyles = new ExtractTextPlugin({
-  filename: "[name].[contenthash].css",
-  disable: process.env.NODE_ENV === "development"
+const ExtractHTMLWebpackPlugin = new HTMLWebpackPlugin({
+  title: 'React/Redux App',
+  template: __dirname + '/client/index.html',
+  filename: 'index.html',
+  favicon: __dirname + '/client/images/favicon.png',
+  inject: 'body',
+  cache: true,
+  hash: true
+})
+
+const ExtractTextPluginStyles = new MiniCssExtractPlugin({
+  filename: "[name].css",
+  chunkFilename: "[id].css"
 });
 
 const isDevBuild = () => {
@@ -22,23 +32,21 @@ module.exports = {
     rules: [
       {
 				test: /\.scss$/,
-          	    use: ExtractTextPluginStyles.extract({
                 use: [
-					{
-						loader: "css-loader",
-						query: {
-							modules: true
-						  }
-					}, 
-					{
-						loader: "sass-loader",
-						query: {
-							modules: true
-						  }
-					}
-				],
-                fallback: "style-loader"
-            })
+                  MiniCssExtractPlugin.loader,
+                  {
+                    loader: "css-loader",
+                    query: {
+                      modules: true
+                      }
+                  }, 
+                  {
+                    loader: "sass-loader",
+                    query: {
+                      modules: true
+                      }
+                  }
+				]
 			},
       {
         test: /\.(jpe?g|png|gif)$/i,
@@ -73,14 +81,7 @@ module.exports = {
 		path: __dirname + '/build'
   },
   plugins:[ 
-    new HTMLWebpackPlugin({
-      title: 'React/Redux App',
-      template: __dirname + '/client/index.html',
-      filename: 'index.html',
-      favicon: __dirname + '/client/images/favicon.png',
-      inject: 'body',
-      cache: true,
-      hash: true
-    })
+    ExtractHTMLWebpackPlugin,
+    ExtractTextPluginStyles
   ]
 }

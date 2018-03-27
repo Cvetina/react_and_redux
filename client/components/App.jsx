@@ -1,10 +1,11 @@
 import React from 'react';
 import {render} from 'react-dom';
+import style from './styles/main.scss';
 
 class App extends React.Component {
   render() {
     return (
-      <div>hello world</div>
+      <h3>hello world</h3>
     );
   }
 }
