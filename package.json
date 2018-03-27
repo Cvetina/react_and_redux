@@ -1,0 +1,35 @@
+{
+  "name": "react_and_redux",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Cvetina/react_and_redux.git",
+  "author": "Cvetina <cveti_mateeva@abv.bg>",
+  "license": "MIT",
+  "dependencies": {
+    "add-react": "^1.0.13",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.1.0",
+    "path": "^0.12.7",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.3.0",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-sass-loaders": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "webpack-cli": "^2.0.13"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  }
+}
