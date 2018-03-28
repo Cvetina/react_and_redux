@@ -1,1 +1,1 @@
-# react_and_redux
+# react-redux project for educational purpose

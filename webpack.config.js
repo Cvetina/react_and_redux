@@ -4,12 +4,11 @@ const HTMLWebpackPlugin =  require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const ExtractHTMLWebpackPlugin = new HTMLWebpackPlugin({
-  title: 'React/Redux App',
+  title: 'React-Redux App',
   template: __dirname + '/client/index.html',
   filename: 'index.html',
   favicon: __dirname + '/client/images/favicon.png',
   inject: 'body',
-  cache: true,
   hash: true
 })
 
@@ -25,8 +24,11 @@ const isDevBuild = () => {
 module.exports = {
   mode: isDevBuild ? 'development' : 'production',
   devtool: "source-map",
+  devServer: {
+		historyApiFallback: true
+	},
   entry: {
-		'app': './client/index.jsx'
+		'app': __dirname + '/client/index.jsx'
 	},
   module: {
     rules: [
@@ -69,16 +71,21 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: "babel-loader"
-      }, {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: "babel-loader"
+      }, 
+      {
+        test:/\.jsx$/,
+				exclude: /node_modules/,
+				loader: 'babel-loader'
       }
     ]
   },
   output: {
-    filename: '[name].js',
+    filename: 'bundle.js',
 		path: __dirname + '/build'
+  },
+  watch: true,
+  devServer: {
+    port: 8181
   },
   plugins:[ 
     ExtractHTMLWebpackPlugin,
