@@ -83,6 +83,9 @@ module.exports = {
     filename: 'bundle.js',
 		path: __dirname + '/build'
   },
+  resolve: {
+    extensions: ['*', '.scss', '.js', '.jsx']
+  },
   watch: true,
   devServer: {
     port: 8181

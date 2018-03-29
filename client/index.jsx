@@ -1,9 +1,9 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { connect, Provider } from 'react-redux'
+import { Provider } from 'react-redux'
 
-import { testAction, store } from './store';
-import App from './components/App.jsx'
+import { store } from './store'
+import App from './components/App'
  
 render(
   <Provider store={store}>
@@ -11,20 +11,3 @@ render(
   </Provider>,
   document.getElementById('app')
 )
-
-const mapStateToProps = (state) => ({
-  content: state.content || "Please Wait...",
-});
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    testAction: () => {
-      dispatch(testAction())
-    }
-  }
-};
-
-const AppContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);

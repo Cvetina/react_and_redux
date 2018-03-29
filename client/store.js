@@ -1,38 +1,19 @@
-import {
-    applyMiddleware,
-    combineReducers,
-    createStore,
-   } from 'redux';
-   
-   // actions.js
-   
-   export const testAction = () => ({
-    type: 'TEST_ACTION',
-   });
-   
-   // reducers.js
-   export const dvas0004 = (state = {}, action) => {
-    switch (action.type) {
-    case 'TEST_ACTION':
-    return {
-    content: "Hi there"
-    };
-    default:
-    return state;
-    }
-   };
-   
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+import { theReducer } from './reducers/index' 
+  
+const initialState = {
+    hello: false,
+    good: false,
+    content: '---Initial Content!!!---'
+}
+
    export const reducers = combineReducers({
-    dvas0004,
+    theReducer
    });
-   
-   // store.js
-   export function configureStore(initialState = {}) {
-    const store = createStore(
-    reducers,
-    initialState
-    )
-    return store;
+
+   export function configureStore(initialState) {
+        const store = createStore(reducers, initialState)
+        return store;
    };
    
    export const store = configureStore();
