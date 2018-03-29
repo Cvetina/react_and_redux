@@ -1,12 +1,24 @@
-import { TEST_ACTION } from '../actions/index.js'
+import { TEST_ACTION, ADD_TODO_TEXT } from '../actions/index'
    
-export const theReducer = (state = {}, action) => {
-    switch (action.type) {
-        case TEST_ACTION:
-        return {
-        content: "Hi there"
-      };
+export const toDoReducer = (state = {todos: {text: 'First toDo'}}, action) => {
+  switch (action.type) {
+    case ADD_TODO_TEXT:
+      return [
+        ...state,
+        {
+          text: action.text,
+          completed: false
+        }
+      ]
+    case TEST_ACTION:
+      return [
+        ...state, 
+        { 
+          text: action.text,
+          completed: false
+        }
+      ]
     default:
-        return state;
-      }
-   };                           
+      return state
+  }
+};                           

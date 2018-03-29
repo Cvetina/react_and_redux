@@ -1,19 +1,15 @@
-import { applyMiddleware, combineReducers, createStore } from 'redux';
-import { theReducer } from './reducers/index' 
+import { applyMiddleware, combineReducers, createStore } from 'redux'
+import { toDoReducer } from './reducers/index' 
   
-const initialState = {
-    hello: false,
-    good: false,
-    content: '---Initial Content!!!---'
-}
+const initialState = {}
 
-   export const reducers = combineReducers({
-    theReducer
-   });
+export const reducers = combineReducers({
+    toDoReducer
+});
 
-   export function configureStore(initialState) {
-        const store = createStore(reducers, initialState)
-        return store;
-   };
+export function configureStore() {
+    const store = createStore(reducers, initialState)
+    return store;
+};
    
-   export const store = configureStore();
+export const store = configureStore();

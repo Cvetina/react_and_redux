@@ -1,12 +1,12 @@
 import React from 'react'
-import style from './styles/App.scss'
-import InnerApp from './InnerApp.jsx'
+import style from './styles/App'
+import Todo from './Todo'
 
 class App extends React.Component {
   render() {
     return (
         <div className={style.container}>
-          <InnerApp />
+          <Todo />
         </div>
     );
   }
