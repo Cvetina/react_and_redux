@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
 .container {
+  display: flex;
   font-family: "Lato";
   background-color: #9ef3de;
+  height: 100vh;
 }
 

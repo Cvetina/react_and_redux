@@ -1,6 +1,11 @@
 import { TEST_ACTION, ADD_TODO_TEXT } from '../actions/index'
+
+const initialState = {
+  isVisible: false,
+  todoList: {text: 'To give Gogo`s medical note'}
+}
    
-export const toDoReducer = (state = {todos: {text: 'First toDo'}}, action) => {
+export const todos = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO_TEXT:
       return [
