@@ -22,8 +22,14 @@ class ProductList extends React.Component {
 
     return   (
       <div>
+        {!products &&
+          <span>Loading...</span>
+        }
         {products &&
-          products.sofa.map(item => <li>{item.title}</li>)
+          products.sofa.map(item => <div>{item.title} {item.images.map(image => <img src={image} />)} </div>)
+        }
+        {products &&
+          products.kitchen.map(item => <div>{item.title} {item.images.map(image => <img src={image} />)} </div>)
         }
       </div>
     )

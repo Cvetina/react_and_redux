@@ -26,7 +26,7 @@ module.exports = {
   devtool: "source-map",
   devServer: {
 		historyApiFallback: true
-	},
+  },
   entry: {
 		'app': __dirname + '/client/index.jsx'
 	},
@@ -80,15 +80,17 @@ module.exports = {
     ]
   },
   output: {
-    filename: 'bundle.js',
-		path: __dirname + '/build'
+		path: __dirname + '/build',
+    filename: '[hash].js',
+    publicPath: '/'
   },
   resolve: {
     extensions: ['*', '.scss', '.js', '.jsx']
   },
   watch: true,
   devServer: {
-    port: 8181
+    port: 8181,
+    historyApiFallback: true,
   },
   plugins:[ 
     ExtractHTMLWebpackPlugin,

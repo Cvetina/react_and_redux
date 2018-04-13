@@ -2,7 +2,7 @@ import React from 'react'
 import connect from 'redux-connect-decorator'
 import style from './styles/App'
 
-class Todo extends React.Component {   
+class Home extends React.Component {   
     render() {
       return (
         <div>
@@ -12,4 +12,4 @@ class Todo extends React.Component {
     }
   }
    
-export default Todo
+export default Home
