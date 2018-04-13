@@ -1,13 +1,13 @@
 export const TEST_ACTION = 'TEST_ACTION'
 export const ADD_TODO_TEXT = 'ADD_TODO_TEXT'
 
-export const testAction = (text) => ({
+export const testAction = (todos) => ({
   type: TEST_ACTION,
-  text
+  todos
  });
 
- export const addTodo = (text) => ({
+export const addTodo = (todos) => ({
   type: ADD_TODO_TEXT,
-  text
- });
+  todos
+});
  
