@@ -1,6 +1,7 @@
 export const initialState = {
-   products: [],
-   todos: [
+  images: [],
+  products: [],
+  todos: [
     {
       text: 'Consider using Redux',
       completed: true,
@@ -9,6 +10,6 @@ export const initialState = {
       text: 'Keep all state in a single tree',
       completed: false
     }
-   ]
-  }
+  ]
+}
      

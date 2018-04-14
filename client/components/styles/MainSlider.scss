@@ -1,0 +1,17 @@
+@import './main.scss';
+
+.container {
+    @extend %flexbox;
+    @extend %box-shadow-black-green;
+    max-width: 300px;
+    margin: 0 auto;
+    min-height: 0;
+    min-width: 0;
+    img {
+        display: flex;
+        max-width: 100%;
+        min-height: 0;
+        min-width: 0;
+    }
+}
+

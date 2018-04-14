@@ -1,9 +1,10 @@
+@import './main.scss';
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
 .container {
   display: flex;
+  flex-direction: column;
   font-family: "Lato";
-  background-color: #9ef3de;
-  height: 100vh;
+  min-height: 100vh;
 }
 

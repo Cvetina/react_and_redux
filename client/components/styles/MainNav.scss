@@ -1,0 +1,27 @@
+@import './main.scss';
+
+.navContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: strech;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  font-family: "Lato";
+  background-color: $main-nav-bg;
+}
+
+.navItem {
+  flex: 1;
+  color: $main-nav-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover, &:focus, &:active {
+    background-color: $main-nav-active-link-bg;
+    color: $main-nav-active-link-color;
+  }
+}

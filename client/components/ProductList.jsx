@@ -1,7 +1,7 @@
 import React from "react"
-import { bindActionCreators, dispatch } from 'redux'
+import { dispatch } from 'redux'
 import { connect } from "react-redux"
-import  { loadProducts }  from '../actions/productsActions'
+import  { loadProducts }  from '../API/httpRequests'
 
 @connect((store) => {
   return {
@@ -13,17 +13,13 @@ class ProductList extends React.Component {
     this.props.dispatch(loadProducts());
   }
 
-  fetchProducts() {
-    this.props.dispatch(loadProducts());
-  }
-
   render() {
     const { products } = this.props
 
     return   (
       <div>
         {!products &&
-          <span>Loading...</span>
+          <div>Loading...</div>
         }
         {products &&
           products.sofa.map(item => <div>{item.title} {item.images.map(image => <img src={image} />)} </div>)
