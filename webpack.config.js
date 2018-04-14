@@ -24,6 +24,7 @@ const isDevBuild = () => {
 module.exports = {
   mode: isDevBuild ? 'development' : 'production',
   devtool: "source-map",
+  cache: false,
   devServer: {
 		historyApiFallback: true
   },
@@ -33,22 +34,22 @@ module.exports = {
   module: {
     rules: [
       {
-				test: /\.scss$/,
-                use: [
-                  MiniCssExtractPlugin.loader,
-                  {
-                    loader: "css-loader",
-                    query: {
-                      modules: true
-                      }
-                  }, 
-                  {
-                    loader: "sass-loader",
-                    query: {
-                      modules: true
-                      }
-                  }
-				]
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            query: {
+              modules: true
+              }
+          }, 
+          {
+            loader: "sass-loader",
+            query: {
+              modules: true
+              }
+          }
+        ]
 			},
       {
         test: /\.(jpe?g|png|gif)$/i,
