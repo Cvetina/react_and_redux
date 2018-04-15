@@ -1,0 +1,88 @@
+{
+  "sofa": [
+    {
+      "title": "Sofa",
+      "price": "900 EUR",
+      "sale" : true,
+      "salePrice" : "810 EUR",
+      "discount": 10,
+      "size": "251/155/79H",
+      "material": "TEXTILE/ECO LEATHER",
+      "color": "WHITE/GREY",
+      "packeges": 2,
+      "Weight": "136 kg.",
+      "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
+      "image": "/client/images/sofas/sofa_1.jpg"
+    },
+    {
+      "title": "Sofa",
+      "price": "900 EUR",
+      "sale" : true,
+      "salePrice" : "810 EUR",
+      "discount": 10,
+      "size": "251/155/79H",
+      "material": "TEXTILE/ECO LEATHER",
+      "color": "WHITE/GREY",
+      "packeges": 2,
+      "Weight": "136 kg.",
+      "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
+      "image": "/client/images/sofas/sofa_1.jpg"
+    },
+    {
+      "title": "Sofa",
+      "price": "900 EUR",
+      "sale" : true,
+      "salePrice" : "810 EUR",
+      "discount": 10,
+      "size": "251/155/79H",
+      "material": "TEXTILE/ECO LEATHER",
+      "color": "WHITE/GREY",
+      "packeges": 2,
+      "Weight": "136 kg.",
+      "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
+      "image": "/client/images/sofas/sofa_1.jpg"
+    },
+    {
+      "title": "Sofa",
+      "price": "900 EUR",
+      "sale" : true,
+      "salePrice" : "810 EUR",
+      "discount": 10,
+      "size": "251/155/79H",
+      "material": "TEXTILE/ECO LEATHER",
+      "color": "WHITE/GREY",
+      "packeges": 2,
+      "Weight": "136 kg.",
+      "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
+      "image": "/client/images/sofas/sofa_1.jpg"
+    },
+    {
+      "title": "Sofa",
+      "price": "900 EUR",
+      "sale" : true,
+      "salePrice" : "810 EUR",
+      "discount": 10,
+      "size": "251/155/79H",
+      "material": "TEXTILE/ECO LEATHER",
+      "color": "WHITE/GREY",
+      "packeges": 2,
+      "Weight": "136 kg.",
+      "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
+      "image": "/client/images/sofas/sofa_1.jpg"
+    },
+    {
+      "title": "Sofa",
+      "price": "900 EUR",
+      "sale" : true,
+      "salePrice" : "810 EUR",
+      "discount": 10,
+      "size": "251/155/79H",
+      "material": "TEXTILE/ECO LEATHER",
+      "color": "WHITE/GREY",
+      "packeges": 2,
+      "Weight": "136 kg.",
+      "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
+      "image": "/client/images/sofas/sofa_1.jpg"
+    }
+  ]
+}

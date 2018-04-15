@@ -9,9 +9,9 @@ import style from './styles/ProductList'
     products: store.products.products
   };
 })
-class ProductList extends React.Component {
+class ProductListSofa extends React.Component {
   componentDidMount() {
-    this.props.dispatch(loadProducts());
+    this.props.dispatch(loadProducts('sofa'));
   }
 
   render() {
@@ -27,20 +27,7 @@ class ProductList extends React.Component {
             products.sofa.map(item => 
               <div className={style.productItem}>
                 <span className={style.title}>{item.title}</span> 
-                  {item.images.map(image => 
-                    <img className={style.productImage} src={image} />
-                  )} 
-              </div>)
-          }
-        </div>
-        <div className={style.productContainer}>
-          {products &&
-            products.kitchen.map(item => 
-              <div className={style.productItem}>
-                <span className={style.title}>{item.title}</span> 
-                  {item.images.map(image => 
-                    <img className={style.productImage} src={image} />
-                  )} 
+                <img className={style.productImage} src={item.image} />
               </div>)
           }
         </div>
@@ -48,5 +35,5 @@ class ProductList extends React.Component {
     )
   }
 }
-export default ProductList
+export default ProductListSofa
 
