@@ -8,23 +8,37 @@
 .productContainer {
   @extend %flex-container-row-center;
   margin: 10px;
+  text-decoration: none;
+  color: $product-color;
 }
 
 .productItem {
-  width: 300px;
-  height: 300px;
+  @extend %flex-container-column;
+  @extend %clip-path-arrow-right ;
   margin: 10px;
+  width: 300px;
+
+  &:nth-child(odd) {
+    @extend %clip-path-arrow-left ;
+
+    .title {
+      text-align: right;
+      padding-right: 10%;
+    }
+  }
 }
 
 .productImage {
-  width: 100%;
-  border-radius: 10px;
+  max-width: 300px;
+  height: 300px;
+  border-bottom: 3px solid $product-image-border-color;
 }
 
 .title {
-  display: flex;
   padding: 5px 0;
-  margin: 5px 0;
-  justify-content: center;
-  background-color: $silk;
+  margin-bottom: 5px;
+  text-indent: 10%;
+  background-color: $product-title-bg-color;
+  border-top: 3px solid $product-title-border-color;
+  text-transform: uppercase;
 }

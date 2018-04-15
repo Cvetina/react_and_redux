@@ -9,9 +9,9 @@ import style from './styles/ProductList'
     products: store.products.products
   };
 })
-class ProductListSofa extends React.Component {
+class ProductListBedroom extends React.Component {
   componentDidMount() {
-    this.props.dispatch(loadProducts('sofa'));
+    this.props.dispatch(loadProducts('bedroom'));
   }
 
   render() {
@@ -23,11 +23,11 @@ class ProductListSofa extends React.Component {
           <div className={style.loader}>
             <div className={style.loaderCubeOne} />
             <div className={style.loaderCubeTwo} />
-        </div>
+          </div>
         }
         <div className={style.productContainer}>
-          {products && products.sofa &&
-            products.sofa.map(item => 
+          {products && products.bedroom &&
+            products.bedroom.map(item => 
               <div className={style.productItem}>
                 <span className={style.title}>{item.title}</span> 
                 <img className={style.productImage} src={item.image} />
@@ -38,5 +38,5 @@ class ProductListSofa extends React.Component {
     )
   }
 }
-export default ProductListSofa
+export default ProductListBedroom
 

@@ -2,13 +2,71 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
 body {
-    margin: 0;
+  margin: 0;
+  background: url("/client/images/backgrounds/bg.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
+
+/* flex box model */
+
 %flex-container-row-center {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+%flex-container-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Loader */
+
+.loader {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+
+    .loaderCubeOne, .loaderCubeTwo {
+        background-color: $loader-bg;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: sk-cubemove 1.8s infinite ease-in-out;
+    }
+
+    .loaderCubeTwo {
+        animation-delay: -0.9s;
+    }
+}
+
+@keyframes sk-cubemove {
+    25% { 
+      transform: translateX(42px) rotate(-90deg) scale(0.5);
+    } 50% { 
+      transform: translateX(42px) translateY(42px) rotate(-179deg);
+    } 50.1% { 
+      transform: translateX(42px) translateY(42px) rotate(-180deg);
+    } 75% { 
+      transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    } 100% { 
+      transform: rotate(-360deg);
+    }
   }
-  
+
+  /* clip path */
+  %clip-path-arrow-right {
+    -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  }
+
+  %clip-path-arrow-left {
+    -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  }

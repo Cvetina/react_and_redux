@@ -1,7 +1,7 @@
 {
-  "sofa": [
+  "bedroom": [
     {
-      "title": "Sofa",
+      "title": "Bedroom",
       "price": "900 EUR",
       "sale" : true,
       "salePrice" : "810 EUR",
@@ -11,11 +11,11 @@
       "color": "WHITE/GREY",
       "packeges": 2,
       "Weight": "136 kg.",
-      "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/sofas/sofa_1.jpg"
+      "description": "Be sure to find Bedroom that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
+      "image": "/client/images/bedroom/bedroom_1.jpg"
     },
     {
-      "title": "Sofa",
+      "title": "Bedroom",
       "price": "900 EUR",
       "sale" : true,
       "salePrice" : "810 EUR",
@@ -25,11 +25,11 @@
       "color": "WHITE/GREY",
       "packeges": 2,
       "Weight": "136 kg.",
-      "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/sofas/sofa_3.jpg"
+      "description": "Be sure to find Bedroom that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
+      "image": "/client/images/bedroom/bedroom_2.jpg"
     },
     {
-      "title": "Sofa",
+      "title": "Bedroom",
       "price": "900 EUR",
       "sale" : true,
       "salePrice" : "810 EUR",
@@ -39,11 +39,11 @@
       "color": "WHITE/GREY",
       "packeges": 2,
       "Weight": "136 kg.",
-      "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/sofas/sofa_3.jpg"
+      "description": "Be sure to find Bedroom that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
+      "image": "/client/images/bedroom/bedroom_3.jpg"
     },
     {
-      "title": "Sofa",
+      "title": "Bedroom",
       "price": "900 EUR",
       "sale" : true,
       "salePrice" : "810 EUR",
@@ -53,11 +53,11 @@
       "color": "WHITE/GREY",
       "packeges": 2,
       "Weight": "136 kg.",
-      "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/sofas/sofa_1.jpg"
+      "description": "Be sure to find Bedroom that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
+      "image": "/client/images/bedroom/bedroom_1.jpg"
     },
     {
-      "title": "Sofa",
+      "title": "Bedroom",
       "price": "900 EUR",
       "sale" : true,
       "salePrice" : "810 EUR",
@@ -67,11 +67,11 @@
       "color": "WHITE/GREY",
       "packeges": 2,
       "Weight": "136 kg.",
-      "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/sofas/sofa_2.jpg"
+      "description": "Be sure to find Bedroom that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
+      "image": "/client/images/bedroom/bedroom_2.jpg"
     },
     {
-      "title": "Sofa",
+      "title": "Bedroom",
       "price": "900 EUR",
       "sale" : true,
       "salePrice" : "810 EUR",
@@ -81,8 +81,8 @@
       "color": "WHITE/GREY",
       "packeges": 2,
       "Weight": "136 kg.",
-      "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/sofas/sofa_3.jpg"
+      "description": "Be sure to find Bedroom that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
+      "image": "/client/images/bedroom/bedroom_3.jpg"
     }
   ]
 }
