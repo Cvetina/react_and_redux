@@ -2,6 +2,7 @@ import React from "react"
 import { dispatch } from 'redux'
 import { connect } from "react-redux"
 import  { loadProducts }  from '../API/httpRequests'
+import style from './styles/ProductList'
 
 @connect((store) => {
   return {
@@ -17,16 +18,32 @@ class ProductList extends React.Component {
     const { products } = this.props
 
     return   (
-      <div>
+      <div className={style.container}>
         {!products &&
           <div>Loading...</div>
         }
-        {products &&
-          products.sofa.map(item => <div>{item.title} {item.images.map(image => <img src={image} />)} </div>)
-        }
-        {products &&
-          products.kitchen.map(item => <div>{item.title} {item.images.map(image => <img src={image} />)} </div>)
-        }
+        <div className={style.productContainer}>
+          {products &&
+            products.sofa.map(item => 
+              <div className={style.productItem}>
+                <span className={style.title}>{item.title}</span> 
+                  {item.images.map(image => 
+                    <img className={style.productImage} src={image} />
+                  )} 
+              </div>)
+          }
+        </div>
+        <div className={style.productContainer}>
+          {products &&
+            products.kitchen.map(item => 
+              <div className={style.productItem}>
+                <span className={style.title}>{item.title}</span> 
+                  {item.images.map(image => 
+                    <img className={style.productImage} src={image} />
+                  )} 
+              </div>)
+          }
+        </div>
       </div>
     )
   }

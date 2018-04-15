@@ -2,11 +2,12 @@ import React from "react"
 import { dispatch } from 'redux'
 import { connect } from "react-redux"
 import  { loadMainSliderImages }  from '../API/httpRequests'
-import style from './styles/App'
+import MainSlider from './MainSlider'
+import style from './styles/Home'
 
 @connect((store) => {
   return {
-    images: store.images
+    images: store.images.images
   };
 })
 class Home extends React.Component {   
@@ -18,8 +19,15 @@ class Home extends React.Component {
       const { images } = this.props;
 
       return (
-        <div>
-          hello
+        <div className={style.mainContainer}>
+          {!images &&
+            <div>Loading...</div>
+          }
+          <MainSlider>
+            {images &&
+                images.slides.map(image => <img className={style.sliderImage} src={image} />)
+            }
+          </MainSlider>
         </div>
       )
     }
