@@ -1,11 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import style from './styles/LeftSidebar'
 
 function LeftSidebar(props) { 
     return (
       <div className={style.navContainer}>
-        <Link className={style.navItem} to="/sofa">Sofa</Link>
+        <NavLink exact activeClassName={style.current} className={style.navItem} to="/products/sofa">
+          Sofa
+        </NavLink>
         <ul className={style.subNavContainer}>
             {props.sofaItems && props.sofaItems.map(item => 
                   
@@ -14,7 +16,9 @@ function LeftSidebar(props) {
                   </li>
               )}
             </ul>
-        <Link className={style.navItem} to="/kitchen">Kitchen</Link>
+        <NavLink exact activeClassName={style.current} className={style.navItem} to="/products/kitchen">
+          Kitchen
+        </NavLink>
         <ul className={style.subNavContainer}>
             {props.kitchenItems && props.kitchenItems.map(item => 
               
@@ -23,7 +27,9 @@ function LeftSidebar(props) {
                 </li>
             )}
           </ul>
-        <Link className={style.navItem} to="/bedroom">Bedroom</Link>
+        <NavLink exact activeClassName={style.current} className={style.navItem} to="/products/bedroom">
+          Bedroom
+        </NavLink>
         <ul className={style.subNavContainer}>
             {props.bedroomItems && props.bedroomItems.map(item => 
                 

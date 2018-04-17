@@ -1,0 +1,30 @@
+@import './main.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+.container {
+  @extend %flex-container-row-center-wrap;
+  margin: 20px 0;
+  padding: 10px;
+  font-family: "Lato";
+  background-color: $footer-bg-color;
+  color: $footer-color;
+  border-top: 3px solid $footer-item-border-color;
+}
+
+.containerItem {
+  @extend %flex-container-column;
+  justify-content: stretch;
+  padding: 0 2%;
+  flex: 1;
+}
+
+.link {
+  color: $footer-link-color;
+  transition: color .3s ease;
+  padding: 5% 0;
+
+  &:hover {
+    color: $footer-link-color-hover;
+  }
+}
+

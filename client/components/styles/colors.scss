@@ -17,6 +17,7 @@ $main-nav-border-color: $paper;
 /*left sidebar*/
 $left-sidebar-link-color: $navy-blue;
 $left-sidebar-link-border-color: $paper; 
+$left-sidebar-link-border-color-current: $light-gray; 
 
 /* product list colors */
 $product-title-bg-color: $silk; 
@@ -26,7 +27,12 @@ $product-image-border-bottom-color: $silk;
 $product-image-border-top-color: $white;
 $product-description-bg: $paper;
 
-
+/* footer colors */
+$footer-bg-color: $silk;
+$footer-color: $navy-blue;
+$footer-item-border-color:  $charcoal;
+$footer-link-color:  $charcoal;
+$footer-link-color-hover:  $white;
 
 /* loader color */
 $loader-bg: $charcoal;

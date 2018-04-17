@@ -21,7 +21,10 @@ class Home extends React.Component {
       return (
         <div className={style.mainContainer}>
           {!images &&
-            <div>Loading...</div>
+            <div className={style.loader}>
+              <div className={style.loaderCubeOne} />
+              <div className={style.loaderCubeTwo} />
+            </div>
           }
           <MainSlider>
             {images &&

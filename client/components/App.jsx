@@ -6,7 +6,8 @@ import ProductList from './ProductList'
 import ProductListSofa from './ProductListSofa'
 import ProductListKitchen from './ProductListKitchen'
 import ProductListBedroom from './ProductListBedroom'
-import Todo from './Todo'
+import Favourites from './Favourites'
+import Footer from './Footer'
 import style from './styles/App'
 
 export default class App extends React.Component {
@@ -16,12 +17,13 @@ export default class App extends React.Component {
           <MainNav />
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route path='/products' component={ProductList} />
-            <Route path='/sofa' component={ProductListSofa} />
-            <Route path='/kitchen' component={ProductListKitchen} />
-            <Route path='/bedroom' component={ProductListBedroom} />
-            <Route path='/todos' component={Todo} />
+            <Route exact path='/products' component={ProductList} />
+            <Route path='/products/sofa' component={ProductListSofa} />
+            <Route path='/products/kitchen' component={ProductListKitchen} />
+            <Route path='/products/bedroom' component={ProductListBedroom} />
+            <Route path='/favourites' component={Favourites} />
           </Switch>
+          <Footer />
         </div>
     );
   }

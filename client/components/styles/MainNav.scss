@@ -20,9 +20,10 @@
 .navItem {
   flex: 1;
   color: $main-nav-color;
-  text-decoration: none;
   text-transform: uppercase;
-  &:hover, &:focus, &:active {
+  transition: background .3s ease;
+
+  &:hover, &:focus, &:active, &.current {
     background-color: $main-nav-active-link-bg;
     color: $main-nav-active-link-color;
   }

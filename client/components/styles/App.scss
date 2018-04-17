@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
 .container {
-  display: flex;
-  flex-direction: column;
+  @extend %flex-container-column;
+  justify-content: space-between;
+  padding: 45px 0;
   font-family: "Lato";
   min-height: 100vh;
 }
