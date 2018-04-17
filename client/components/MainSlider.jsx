@@ -13,6 +13,7 @@ class MainSlider extends React.Component {
 			autoplay: true,
 			pauseOnHover: true,
 			dots: true,
+			arrows: false,
 			infinite: true,
 			speed: 1000,
 			slidesToShow: 1

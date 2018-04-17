@@ -10,7 +10,7 @@
       "material": "TEXTILE/ECO LEATHER",
       "color": "WHITE/GREY",
       "packeges": 2,
-      "Weight": "136 kg.",
+      "weight": "136 kg.",
       "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
       "image": "/client/images/sofas/sofa_1.jpg"
     },
@@ -24,7 +24,7 @@
       "material": "TEXTILE/ECO LEATHER",
       "color": "WHITE/GREY",
       "packeges": 2,
-      "Weight": "136 kg.",
+      "weight": "136 kg.",
       "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
       "image": "/client/images/sofas/sofa_3.jpg"
     },
@@ -38,7 +38,7 @@
       "material": "TEXTILE/ECO LEATHER",
       "color": "WHITE/GREY",
       "packeges": 2,
-      "Weight": "136 kg.",
+      "weight": "136 kg.",
       "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
       "image": "/client/images/sofas/sofa_3.jpg"
     },
@@ -52,7 +52,7 @@
       "material": "TEXTILE/ECO LEATHER",
       "color": "WHITE/GREY",
       "packeges": 2,
-      "Weight": "136 kg.",
+      "weight": "136 kg.",
       "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
       "image": "/client/images/sofas/sofa_1.jpg"
     },
@@ -66,7 +66,7 @@
       "material": "TEXTILE/ECO LEATHER",
       "color": "WHITE/GREY",
       "packeges": 2,
-      "Weight": "136 kg.",
+      "weight": "136 kg.",
       "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
       "image": "/client/images/sofas/sofa_2.jpg"
     },
@@ -80,7 +80,7 @@
       "material": "TEXTILE/ECO LEATHER",
       "color": "WHITE/GREY",
       "packeges": 2,
-      "Weight": "136 kg.",
+      "weight": "136 kg.",
       "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
       "image": "/client/images/sofas/sofa_3.jpg"
     }

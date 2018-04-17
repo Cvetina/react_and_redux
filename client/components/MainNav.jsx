@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import style from './styles/MainNav'
 
 class MainNav extends React.Component {   

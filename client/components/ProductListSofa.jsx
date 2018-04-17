@@ -2,6 +2,7 @@ import React from "react"
 import { dispatch } from 'redux'
 import { connect } from "react-redux"
 import  { loadProducts }  from '../API/httpRequests'
+import LeftSidebar from './LeftSidebar'
 import style from './styles/ProductList'
 
 @connect((store) => {
@@ -19,6 +20,9 @@ class ProductListSofa extends React.Component {
 
     return   (
       <div className={style.container}>
+        {
+          products && <LeftSidebar sofaItems={products.sofa} />
+        }
         {!products &&
           <div className={style.loader}>
             <div className={style.loaderCubeOne} />
@@ -27,12 +31,17 @@ class ProductListSofa extends React.Component {
         }
         <div className={style.productContainer}>
           {products && products.sofa &&
-            products.sofa.map(item => 
-              <div className={style.productItem}>
-                <span className={style.title}>{item.title}</span> 
-                <img className={style.productImage} src={item.image} />
-              </div>)
-          }
+              products.sofa.map(item => 
+                <div className={style.productItem}>
+                  <span className={style.title}>{item.title}</span> 
+                  <img className={style.productImage} src={item.image} />
+                  <div className={style.productDescription}>
+                    <h3>{item.price}</h3>
+                    <h4>{item.material} {item.color}</h4>
+                    <p>Description: {item.description}</p>
+                  </div>
+                </div>)
+            }
         </div>
       </div>
     )

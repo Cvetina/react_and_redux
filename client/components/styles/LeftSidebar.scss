@@ -1,0 +1,31 @@
+@import './main.scss';
+
+.navContainer {
+    @extend %flex-container-column;
+    align-self: stretch;
+    width: 300px;
+    padding: 10px;
+}
+
+.navItem {
+    @extend %flex-container-column;
+    color: $left-sidebar-link-color;
+    padding: 5px;
+    border-bottom: 1px solid $left-sidebar-link-border-color;
+    text-decoration: none;
+    transition: background .3s ease;
+    &:hover {
+        background-color: $silk;
+    }
+}
+
+.subNavContainer {
+    @extend %flex-container-column;
+    align-self: stretch;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    .navItem {
+        padding-left: 15px; 
+    }
+}
