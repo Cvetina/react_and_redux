@@ -2,17 +2,24 @@ import React from "react"
 import { dispatch } from 'redux'
 import { connect } from "react-redux"
 import  { loadProducts }  from '../API/httpRequests'
+import  { addFavourites }  from '../actions/uiActions'
 import LeftSidebar from './LeftSidebar'
+import Star from './shared/Star'
 import style from './styles/ProductList'
 
 @connect((store) => {
   return {
-    products: store.products.products
+    products: store.products.products,
+    toggleFavourites: store.toggleFavourites
   };
 })
 class ProductListBedroom extends React.Component {
   componentDidMount() {
     this.props.dispatch(loadProducts('bedroom'));
+  }
+
+  handleToggleFavourites() {
+    this.props.dispatch(addFavourites());
   }
 
   render() {
@@ -33,7 +40,9 @@ class ProductListBedroom extends React.Component {
           {products && products.bedroom &&
             products.bedroom.map(item => 
               <div className={style.productItem}>
-                <span className={style.title}>{item.title}</span> 
+                <span className={style.title}>
+                  {item.title}<Star toggle={this.handleToggleFavourites.bind(this)} />
+                </span> 
                 <img className={style.productImage} src={item.image} />
                 <div className={style.productDescription}>
                   <h3>{item.price}</h3>
