@@ -18,8 +18,8 @@ class ProductListBedroom extends React.Component {
     this.props.dispatch(loadProducts('bedroom'));
   }
 
-  handleToggleFavourites() {
-    this.props.dispatch(addFavourites());
+  addItemToFavourites(item) {
+    this.props.dispatch(addFavourites(item));
   }
 
   render() {
@@ -41,7 +41,10 @@ class ProductListBedroom extends React.Component {
             products.bedroom.map(item => 
               <div className={style.productItem}>
                 <span className={style.title}>
-                  {item.title}<Star toggle={this.handleToggleFavourites.bind(this)} />
+                  {item.title}
+                  <button onClick={() => this.addItemToFavourites(item)} >
+                      <Star />
+                    </button>
                 </span> 
                 <img className={style.productImage} src={item.image} />
                 <div className={style.productDescription}>

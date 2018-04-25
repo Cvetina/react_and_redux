@@ -2,10 +2,12 @@
 
 .container {
   @extend %flex-container-row-center;
+  @extend %flex-item-1;
 }
 
 .productContainer {
   @extend %flex-container-row-center-wrap;
+  margin: 5px;
   text-decoration: none;
   color: $product-color;
 }
@@ -43,15 +45,11 @@
 }
 
 .title {
-  padding: 5px 0;
   margin-bottom: 5px;
+  line-height: 1.8;
   text-indent: 10%;
   color: $product-title-color;
   background-color: $product-title-bg-color;
   border-top: 3px solid $product-title-border-color;
   text-transform: uppercase;
-}
-
-.icon-star path {
-  color: $paper;
 }

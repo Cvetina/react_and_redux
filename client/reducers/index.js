@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux'
 import products from './productsReducers'
 import images from './sliderImagesReducers'
-import addFavouritesReducer from './uiReducer'
+import favourites from './uiReducer'
 
 const rootReducer = combineReducers({  
    products,
    images,
-   addFavouritesReducer
+   favourites
 })
 
 export default rootReducer;

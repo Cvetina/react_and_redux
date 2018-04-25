@@ -10,6 +10,12 @@ a {
 }
 /* flex box model */
 
+@for $i from 1 through 10 {
+  %flex-item-#{$i} {
+      flex: #{$i};
+  }
+}
+
 %flex-container-row {
   display: flex;
   flex-direction: row;

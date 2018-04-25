@@ -1,11 +1,18 @@
-@import './main.scss';
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import './ProductList.scss';
 
-.container {
-  @extend %flex-container-row;
+.containerFavourites {
+  @extend %flex-container-row-center;
+  @extend %flex-item-1;
   background-image: url("/client/images/backgrounds/bg.jpg");
-  justify-content: space-between;
   background-attachment: fixed;
   background-size: cover;
 }
 
+.remove {
+  width: 30px;
+  height: 30px;
+}
+
+.message {
+  padding: 20px 0;
+}

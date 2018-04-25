@@ -1,6 +1,9 @@
 export const initialState = {
   images: [],
   products: [],
-  addFavourites: false
+  addFavourites: {
+    value: false,
+    items: []
+  }
 }
      
