@@ -2,7 +2,7 @@ import React from "react"
 import { dispatch } from 'redux'
 import { connect } from "react-redux"
 import  { loadProducts }  from '../API/httpRequests'
-import  { addFavourites }  from '../actions/uiActions'
+import  { addFavourites }  from '../actions/favouritesActions'
 import LeftSidebar from './LeftSidebar'
 import Star from './shared/Star'
 import style from './styles/ProductList'
@@ -17,8 +17,8 @@ class ProductListSofa extends React.Component {
     this.props.dispatch(loadProducts('sofa'));
   }
 
-  addItemToFavourites(item) {
-    this.props.dispatch(addFavourites(item));
+  addItemToFavourites(item, index) {
+    this.props.dispatch(addFavourites(item, index));
   }
 
   render() {
@@ -41,7 +41,7 @@ class ProductListSofa extends React.Component {
                 <div key={index} className={style.productItem}>
                   <span className={style.title}>
                     {item.title}
-                    <button onClick={() => this.addItemToFavourites(item)} >
+                    <button className={style.buttonAdd} onClick={() => this.addItemToFavourites(item, index)} >
                       <Star />
                     </button>
                   </span> 

@@ -1,18 +1,23 @@
 @import './ProductList.scss';
 
 .containerFavourites {
-  @extend %flex-container-row-center;
+  @extend %flex-container-row;
   @extend %flex-item-1;
   background-image: url("/client/images/backgrounds/bg.jpg");
   background-attachment: fixed;
   background-size: cover;
 }
 
-.remove {
+.buttonRemove {
   width: 30px;
   height: 30px;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .message {
   padding: 20px 0;
+  width: 100%;
+  text-align: center;
 }

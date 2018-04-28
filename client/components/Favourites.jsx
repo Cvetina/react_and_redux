@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import  { removeFavourites }  from '../actions/uiActions'
+import  { removeFavourites }  from '../actions/favouritesActions'
 import LeftSidebar from './LeftSidebar'
 import style from './styles/Favourites'
 
@@ -10,8 +10,8 @@ import style from './styles/Favourites'
   };
 })
 class Favourites extends React.Component {  
-    removeItemFromFavourites(item) {
-      this.props.dispatch(removeFavourites(item));
+    removeItemFromFavourites(item, index) {
+      this.props.dispatch(removeFavourites(item, index));
     }
 
     render() {
@@ -27,7 +27,7 @@ class Favourites extends React.Component {
               <div key={index} className={style.productItem}>
                 <span className={style.title}>
                   {item.title}
-                  <button className={style.remove} onClick={() => this.removeItemFromFavourites(index)} > 
+                  <button className={style.buttonRemove} onClick={() => this.removeItemFromFavourites(item, index)} > 
                     x 
                   </button>
                 </span> 
