@@ -1,6 +1,7 @@
 {
   "sofa": [
     {
+      "id": "01",
       "title": "Sofa",
       "price": "900 EUR",
       "sale" : true,
@@ -15,6 +16,7 @@
       "image": "/client/images/sofas/sofa_1.jpg"
     },
     {
+      "id": "02",
       "title": "Sofa",
       "price": "900 EUR",
       "sale" : true,
@@ -29,6 +31,7 @@
       "image": "/client/images/sofas/sofa_3.jpg"
     },
     {
+      "id": "03",
       "title": "Sofa",
       "price": "900 EUR",
       "sale" : true,
@@ -43,6 +46,7 @@
       "image": "/client/images/sofas/sofa_3.jpg"
     },
     {
+      "id": "04",
       "title": "Sofa",
       "price": "900 EUR",
       "sale" : true,
@@ -57,6 +61,7 @@
       "image": "/client/images/sofas/sofa_1.jpg"
     },
     {
+      "id": "05",
       "title": "Sofa",
       "price": "900 EUR",
       "sale" : true,
@@ -71,6 +76,7 @@
       "image": "/client/images/sofas/sofa_2.jpg"
     },
     {
+      "id": "06",
       "title": "Sofa",
       "price": "900 EUR",
       "sale" : true,

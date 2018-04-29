@@ -1,6 +1,7 @@
 {
   "kitchen": [
     {
+      "id": "100",
       "title": "Kitchen",
       "price": "900 EUR",
       "sale" : true,
@@ -15,6 +16,7 @@
       "image": "/client/images/kitchen/kitchen_1.jpg"
     },
     {
+      "id": "101",
       "title": "Kitchen",
       "price": "900 EUR",
       "sale" : true,
@@ -29,6 +31,7 @@
       "image": "/client/images/kitchen/kitchen_2.jpg"
     },
     {
+      "id": "102",
       "title": "Kitchen",
       "price": "900 EUR",
       "sale" : true,
@@ -43,6 +46,7 @@
       "image": "/client/images/kitchen/kitchen_3.jpg"
     },
     {
+      "id": "103",
       "title": "Kitchen",
       "price": "900 EUR",
       "sale" : true,
@@ -56,7 +60,8 @@
       "description": "Be sure to find Kitchen that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
       "image": "/client/images/kitchen/kitchen_1.jpg"
     },
-    {
+    {      
+      "id": "104",
       "title": "Kitchen",
       "price": "900 EUR",
       "sale" : true,
@@ -71,6 +76,7 @@
       "image": "/client/images/kitchen/kitchen_2.jpg"
     },
     {
+      "id": "105",
       "title": "Kitchen",
       "price": "900 EUR",
       "sale" : true,

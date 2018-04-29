@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import  { removeFavourites }  from '../actions/favouritesActions'
 import LeftSidebar from './LeftSidebar'
+import Remove from './shared/Remove'
 import style from './styles/Favourites'
 
 @connect((store) => {
@@ -27,8 +28,8 @@ class Favourites extends React.Component {
               <div key={index} className={style.productItem}>
                 <span className={style.title}>
                   {item.title}
-                  <button className={style.buttonRemove} onClick={() => this.removeItemFromFavourites(item, index)} > 
-                    x 
+                  <button title="Remove from list" className={style.buttonRemove} onClick={() => this.removeItemFromFavourites(item, index)} > 
+                    <Remove />
                   </button>
                 </span> 
                 <img className={style.productImage} src={item.image} />

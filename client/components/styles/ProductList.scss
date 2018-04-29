@@ -37,6 +37,13 @@
   background: none;
   border: none;
   outline: none;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: background .3s ease;
+
+  &:hover {
+    background-color: $product-favourite-button-bg;
+  }
 }
 
 .productDescription {
@@ -52,7 +59,6 @@
 
 .title {
   margin-bottom: 5px;
-  line-height: 1.8;
   text-indent: 10%;
   color: $product-title-color;
   background-color: $product-title-bg-color;

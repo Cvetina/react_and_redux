@@ -42,7 +42,7 @@ class ProductListBedroom extends React.Component {
               <div className={style.productItem}>
                 <span className={style.title}>
                   {item.title}
-                  <button className={style.buttonAdd} onClick={() => this.addItemToFavourites(item, index)} >
+                  <button title="Add to favourites list" className={style.buttonAdd} onClick={() => this.addItemToFavourites(item, index)} >
                       <Star />
                     </button>
                 </span> 

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './styles/Star.scss';
+import style from './styles/SVG.scss';
 
 const Star = () => {
         return(
