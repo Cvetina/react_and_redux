@@ -18,6 +18,7 @@
 }
 
 .navItem {
+  @extend %flex-container-row-center;
   flex: 1;
   color: $main-nav-color;
   text-transform: uppercase;
@@ -27,4 +28,19 @@
     background-color: $main-nav-active-link-bg;
     color: $main-nav-active-link-color;
   }
+}
+
+.favouritesCount {
+  background-color: $favourites-count-bg;
+  margin: auto 5px;
+  color: $favourites-count-color;
+  width: 18px;
+  height: 18px;
+  border: 2px solid $favourites-count-border-color;
+  line-height: 1.5;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 18px;
+  transition: background .3s ease;
 }

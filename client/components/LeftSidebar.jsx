@@ -9,9 +9,9 @@ function LeftSidebar(props) {
           Sofa
         </NavLink>
         <ul className={style.subNavContainer}>
-            {props.sofaItems && props.sofaItems.map(item => 
+            {props.sofaItems && props.sofaItems.map((item, index) => 
                   
-                  <li>
+                  <li key={index}>
                     <Link className={style.navItem} to="#">{item.title}</Link>
                   </li>
               )}
@@ -20,9 +20,9 @@ function LeftSidebar(props) {
           Kitchen
         </NavLink>
         <ul className={style.subNavContainer}>
-            {props.kitchenItems && props.kitchenItems.map(item => 
+            {props.kitchenItems && props.kitchenItems.map((item, index) => 
               
-                <li>
+                <li key={index}>
                   <Link className={style.navItem} to="#">{item.title}</Link>
                 </li>
             )}
@@ -31,9 +31,9 @@ function LeftSidebar(props) {
           Bedroom
         </NavLink>
         <ul className={style.subNavContainer}>
-            {props.bedroomItems && props.bedroomItems.map(item => 
+            {props.bedroomItems && props.bedroomItems.map((item, index) => 
                 
-                <li>
+                <li key={index}>
                   <Link className={style.navItem} to="#">{item.title}</Link>
                 </li>
             )}

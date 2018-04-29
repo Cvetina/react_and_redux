@@ -28,7 +28,7 @@ class Home extends React.Component {
           }
           <MainSlider>
             {images &&
-                images.slides.map(image => <img className={style.sliderImage} src={image} />)
+                images.slides.map((image, index) => <img key={index} className={style.sliderImage} src={image} />)
             }
           </MainSlider>
         </div>
