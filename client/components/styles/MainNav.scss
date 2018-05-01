@@ -19,12 +19,12 @@
 
 .navItem {
   @extend %flex-container-row-center;
-  flex: 1;
+  @extend %flex-item-1;
   color: $main-nav-color;
   text-transform: uppercase;
   transition: background .3s ease;
 
-  &:hover, &:focus, &:active, &.current {
+  &:hover, &.current {
     background-color: $main-nav-active-link-bg;
     color: $main-nav-active-link-color;
   }

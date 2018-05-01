@@ -3,6 +3,7 @@ export const initialState = {
   products: [],
   addFavourites: {
     items: []
-  }
+  },
+  toggleActiveFavourites: false
 }
      

@@ -33,7 +33,7 @@
     {
       "id": "003",
       "title": "Bedroom",
-      "price": "6&0 EUR",
+      "price": "670 EUR",
       "sale" : true,
       "salePrice" : "810 EUR",
       "discount": 10,
@@ -58,12 +58,12 @@
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find Bedroom that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/bedroom/bedroom_1.jpg"
+      "image": "/client/images/bedroom/bedroom_4.jpg"
     },
     {
       "id": "005",
       "title": "Bedroom",
-      "price": "900 EUR",
+      "price": "340 EUR",
       "sale" : true,
       "salePrice" : "810 EUR",
       "discount": 10,
@@ -73,12 +73,12 @@
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find Bedroom that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/bedroom/bedroom_2.jpg"
+      "image": "/client/images/bedroom/bedroom_5.jpg"
     },
     {
       "id": "006",
       "title": "Bedroom",
-      "price": "900 EUR",
+      "price": "590 EUR",
       "sale" : true,
       "salePrice" : "810 EUR",
       "discount": 10,
@@ -88,7 +88,7 @@
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find Bedroom that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/bedroom/bedroom_3.jpg"
+      "image": "/client/images/bedroom/bedroom_6.jpg"
     }
   ]
 }

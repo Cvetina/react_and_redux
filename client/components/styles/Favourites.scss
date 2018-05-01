@@ -1,11 +1,17 @@
 @import './ProductList.scss';
 
-.containerFavourites {
+.container {
   @extend %flex-container-row;
-  @extend %flex-item-1;
+  flex-grow: 1;
+  width: 100%;
   background-image: url("/client/images/backgrounds/bg.jpg");
   background-attachment: fixed;
   background-size: cover;
+}
+
+.containerFavourites {
+  @extend %flex-container-row-center-wrap;
+  width: calc(100% - 300px);
 }
 
 .buttonRemove {

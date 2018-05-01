@@ -12,9 +12,9 @@
 
 .containerItem {
   @extend %flex-container-column;
+  @extend %flex-item-1;
   justify-content: stretch;
   padding: 0 2%;
-  flex: 1;
 }
 
 .link {

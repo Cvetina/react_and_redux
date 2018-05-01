@@ -7,22 +7,22 @@ class ProductList extends React.Component {
     const { products } = this.props
 
     return   (
-      <div className={style.container}>
+      <div className={style.productContainer}>
         <Link to="/products/sofa" className={style.productContainer}>
           <div className={style.productItem}>
-              <span className={style.title}>Sofa</span> 
+              <span className={style.groupTitle}>Sofa</span> 
               <img className={style.productImage} src="/client/images/sofas/sofa_1.jpg" />
             </div>
         </Link>
         <Link to="/products/kitchen" className={style.productContainer}>
           <div className={style.productItem}>
-              <span className={style.title}>Kitchen</span> 
+              <span className={style.groupTitle}>Kitchen</span> 
               <img className={style.productImage} src="/client/images/kitchen/kitchen_1.jpg" />
             </div>
         </Link>
         <Link to="/products/bedroom" className={style.productContainer}>
           <div className={style.productItem}>
-              <span className={style.title}>Bedroom</span> 
+              <span className={style.groupTitle}>Bedroom</span> 
               <img className={style.productImage} src="/client/images/kitchen/kitchen_1.jpg" />
             </div>
         </Link>

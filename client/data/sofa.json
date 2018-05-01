@@ -58,7 +58,7 @@
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/sofas/sofa_1.jpg"
+      "image": "/client/images/sofas/sofa_4.jpg"
     },
     {
       "id": "05",
@@ -73,7 +73,7 @@
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/sofas/sofa_2.jpg"
+      "image": "/client/images/sofas/sofa_5.jpg"
     },
     {
       "id": "06",
@@ -88,7 +88,7 @@
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find sofa that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/sofas/sofa_3.jpg"
+      "image": "/client/images/sofas/sofa_6.jpg"
     }
   ]
 }

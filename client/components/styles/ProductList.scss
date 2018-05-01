@@ -2,7 +2,7 @@
 
 .container {
   @extend %flex-container-row-center;
-  @extend %flex-item-1;
+  width: calc(100% - 300px);
 }
 
 .productContainer {
@@ -16,21 +16,6 @@
   @extend %flex-container-column;
   margin: 10px;
   width: 300px;
-  
-  &:nth-child(odd) {
-    .title {
-      text-align: right;
-      padding-right: 10%;
-    }
-  }
-  
-  &:nth-child(odd) {
-    .productImage {
-      border-bottom: none;
-      border-top: 3px solid $product-image-border-top-color;
-      order: 3;
-    }
-  }
 }
 
 .buttonAdd {
@@ -41,7 +26,7 @@
   cursor: pointer;
   transition: background .3s ease;
 
-  &:hover {
+  &:hover, &.selected {
     background-color: $product-favourite-button-bg;
   }
 }
@@ -64,4 +49,14 @@
   background-color: $product-title-bg-color;
   border-top: 3px solid $product-title-border-color;
   text-transform: uppercase;
+}
+
+.groupTitle {
+  margin-bottom: 5px;
+  padding: 5px;
+  color: $product-title-color;
+  background-color: $product-title-bg-color;
+  border-top: 3px solid $product-title-border-color;
+  text-transform: uppercase;
+  text-align: center;
 }

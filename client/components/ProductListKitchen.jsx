@@ -3,13 +3,15 @@ import { dispatch } from 'redux'
 import { connect } from "react-redux"
 import  { loadProducts }  from '../API/httpRequests'
 import  { addFavourites }  from '../actions/favouritesActions'
+import  { toggleActiveFavourites }  from '../actions/uiActions'
 import LeftSidebar from './LeftSidebar'
 import Star from './shared/Star'
 import style from './styles/ProductList'
 
 @connect((store) => {
   return {
-    products: store.products.products
+    products: store.products.products,
+    toggleFavourites: store.ui.toggleActiveFavourites
   };
 })
 class ProductListKitchen extends React.Component {
@@ -19,10 +21,11 @@ class ProductListKitchen extends React.Component {
 
   addItemToFavourites(item, index) {
     this.props.dispatch(addFavourites(item, index));
+    this.props.dispatch(toggleActiveFavourites());
   }
 
   render() {
-    const { products } = this.props
+    const { products, toggleFavourites } = this.props
   
     return   (
       <div className={style.container}>
@@ -38,12 +41,16 @@ class ProductListKitchen extends React.Component {
         <div className={style.productContainer}>
           {products && products.kitchen &&
               products.kitchen.map((item, index) => 
-                <div className={style.productItem}>
+                <div key={index} className={style.productItem}>
                   <span className={style.title}>
                     {item.title}
-                    <button title="Add to favourites list" className={style.buttonAdd} onClick={() => this.addItemToFavourites(item, index)} >
-                      <Star />
-                    </button>
+                    <button
+                      title="Add to favourites list"
+                      className={classNames(style.buttonAdd, { [style.selected]: toggleFavourites })}
+                      onClick={() => this.addItemToFavourites(item, index)} 
+                    >
+                    <Star />
+                  </button>
                   </span> 
                   <img className={style.productImage} src={item.image} />
                   <div className={style.productDescription}>

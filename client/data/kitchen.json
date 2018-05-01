@@ -58,7 +58,7 @@
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find Kitchen that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/kitchen/kitchen_1.jpg"
+      "image": "/client/images/kitchen/kitchen_4.jpg"
     },
     {      
       "id": "104",
@@ -73,7 +73,7 @@
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find Kitchen that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/kitchen/kitchen_2.jpg"
+      "image": "/client/images/kitchen/kitchen_5.jpg"
     },
     {
       "id": "105",
@@ -88,7 +88,7 @@
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find Kitchen that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/kitchen/kitchen_3.jpg"
+      "image": "/client/images/kitchen/kitchen_6.jpg"
     }
   ]
 }
