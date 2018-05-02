@@ -4,9 +4,6 @@
   @extend %flex-container-row;
   flex-grow: 1;
   width: 100%;
-  background-image: url("/client/images/backgrounds/bg.jpg");
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 .containerFavourites {
@@ -30,7 +27,7 @@
 }
 
 .message {
-  padding: 20px 0;
+  padding: 20px;
   width: 100%;
   text-align: center;
 }

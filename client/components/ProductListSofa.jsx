@@ -1,6 +1,7 @@
 import React from "react"
 import { dispatch } from 'redux'
 import { connect } from "react-redux"
+import classNames from "classNames"
 import  { loadProducts }  from '../API/httpRequests'
 import  { addFavourites }  from '../actions/favouritesActions'
 import  { toggleActiveFavourites }  from '../actions/uiActions'

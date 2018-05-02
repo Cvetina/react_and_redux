@@ -2,7 +2,7 @@
 
 .container {
   @extend %flex-container-row-center;
-  width: calc(100% - 300px);
+  min-width: calc(100% - 200px);
 }
 
 .productContainer {
@@ -20,7 +20,10 @@
 
 .buttonAdd {
   background: none;
-  border: none;
+  margin: 0 5px;
+  padding: 0 2px;
+  border: 1px solid $product-favourite-button-border;
+  border-radius: 100%;
   outline: none;
   vertical-align: middle;
   cursor: pointer;

@@ -3,8 +3,8 @@
 .navContainer {
     @extend %flex-container-column;
     align-self: stretch;
-    width: 300px;
-    padding: 10px;
+    min-width: 200px;
+    padding: 10px 0;
 }
 
 .navItem {

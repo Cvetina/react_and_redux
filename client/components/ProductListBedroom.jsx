@@ -47,7 +47,7 @@ class ProductListBedroom extends React.Component {
                   {item.title}
                   <button
                     title="Add to favourites list"
-                    className={classNames(style.buttonAdd, { [style.selected]: toggleFavourites })}
+                    className={classNames(style.buttonAdd, { [style.selected]: toggleFavourites})}
                     onClick={() => this.addItemToFavourites(item, index)} 
                   >
                     <Star />
