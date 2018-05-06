@@ -5,21 +5,43 @@
     align-self: stretch;
     min-width: 200px;
     padding: 10px 0;
+   
+    @media (max-width: 567px) {
+        position: absolute;
+        left: -200px;
+        background-color: $left-sidebar-bg-color;
+        transition: all .3s ease;
+        z-index: 1;
+        padding: 0;
+
+        &.active {
+            left: 0;
+            width: 100%;
+        }
+    }
+
 }
 
 .navItem {
     @extend %flex-container-column;
     color: $left-sidebar-link-color;
+    background-color: $left-sidebar-bg-color;
     padding: 5px;
-    border-bottom: 1px solid $left-sidebar-link-border-color;
-    border-top: 2px solid $transparent;
-    border-bottom: 2px solid $transparent;
+    line-height: 30px;
+    border-left: 4px solid $left-sidebar-link-border-color;
+    border-bottom: 1px solid $paper;
     transition: all .3s ease;
 
     &:hover, &:focus, &:active, &.current  {
-        background-color: $paper;
-        border-top: 2px solid $left-sidebar-link-border-color-current;
-        border-bottom: 2px solid $left-sidebar-link-border-color-current;
+        border-left: 4px solid $left-sidebar-link-border-color-current;
+    }
+
+    @media (max-width: 567px) {
+        color: $left-sidebar-link-color-mobile;
+
+        &:hover, &:focus, &:active, &.currnet {
+            background-color: $left-sidebar-bg-color-hover;
+        }
     }
 }
 

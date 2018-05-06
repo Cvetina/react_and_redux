@@ -7,7 +7,8 @@ import style from './styles/Favourites'
 
 @connect((store) => {
   return {
-    favourites: store.favourites.items
+    favourites: store.favourites.items,
+    toggleFavourites: store.ui.toggleMenu
   };
 })
 class Favourites extends React.Component {  
@@ -16,10 +17,10 @@ class Favourites extends React.Component {
     }
 
     render() {
-      const { favourites } = this.props;
+      const { favourites, toggleFavourites } = this.props;
       return (
         <div className={style.container}>
-          <LeftSidebar />
+          <LeftSidebar  toggleMenu={toggleFavourites} />
           <div className={style.containerFavourites}>
             {favourites.length === 0 &&
               <div className={style.message}>Select your Favourites from Product List Categories</div>

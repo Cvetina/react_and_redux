@@ -1,10 +1,11 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
+import classNames from "classNames"
 import style from './styles/LeftSidebar'
 
-function LeftSidebar(props) { 
+function LeftSidebar(props) {
     return (
-      <div className={style.navContainer}>
+      <div className={classNames(style.navContainer, { [style.active]: props.toggleMenu})}>
         <NavLink exact activeClassName={style.current} className={style.navItem} to="/products/sofa">
           Sofa
         </NavLink>

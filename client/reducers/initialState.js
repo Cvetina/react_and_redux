@@ -4,6 +4,6 @@ export const initialState = {
   addFavourites: {
     items: []
   },
-  toggleActiveFavourites: false
+  toggleMenu: false
 }
      

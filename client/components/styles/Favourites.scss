@@ -1,28 +1,27 @@
 @import './ProductList.scss';
 
 .container {
-  @extend %flex-container-row;
+  @extend %flex-container-row-flex-start;
   flex-grow: 1;
   width: 100%;
 }
 
 .containerFavourites {
   @extend %flex-container-row-center-wrap;
-  width: calc(100% - 300px);
+  width: calc(100% - 200px);
+
+  @media all and (max-width: 567px) {
+    width: 100%;
+    min-width: initial;
+  }
 }
 
 .buttonRemove {
-  width: 30px;
-  height: 30px;
-  background: none;
-  border: none;
-  outline: none;
-  vertical-align: middle;
-  cursor: pointer;
-  transition: background .3s ease;
-
+  transition: all .3s ease;
   &:hover {
-    background-color: $product-favourite-button-bg;
+    svg path {
+      fill: $product-favourite-icon-hover-color;
+    }
   }
 }
 

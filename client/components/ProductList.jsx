@@ -1,31 +1,41 @@
 import React from "react"
 import { Link } from 'react-router-dom';
+import { connect } from "react-redux"
+import LeftSidebar from './LeftSidebar'
 import style from './styles/ProductList'
 
+@connect((store) => {
+  return {
+    toggleFavourites: store.ui.toggleMenu
+  };
+})
 class ProductList extends React.Component {
   render() {
-    const { products } = this.props
+    const { products, toggleFavourites } = this.props
 
     return   (
-      <div className={style.productContainer}>
-        <Link to="/products/sofa" className={style.productContainer}>
-          <div className={style.productItem}>
-              <span className={style.groupTitle}>Sofa</span> 
-              <img className={style.productImage} src="/client/images/sofas/sofa_1.jpg" />
-            </div>
-        </Link>
-        <Link to="/products/kitchen" className={style.productContainer}>
-          <div className={style.productItem}>
-              <span className={style.groupTitle}>Kitchen</span> 
-              <img className={style.productImage} src="/client/images/kitchen/kitchen_1.jpg" />
-            </div>
-        </Link>
-        <Link to="/products/bedroom" className={style.productContainer}>
-          <div className={style.productItem}>
-              <span className={style.groupTitle}>Bedroom</span> 
-              <img className={style.productImage} src="/client/images/kitchen/kitchen_1.jpg" />
-            </div>
-        </Link>
+      <div className={style.mainContainer}>
+        <LeftSidebar toggleMenu={toggleFavourites} />
+        <div className={style.productContainer}>
+          <Link to="/products/sofa">
+            <div className={style.productItem}>
+                <span className={style.groupTitle}>Sofa</span> 
+                <img className={style.productImage} src="/client/images/sofas/sofa_1.jpg" />
+              </div>
+          </Link>
+          <Link to="/products/kitchen">
+            <div className={style.productItem}>
+                <span className={style.groupTitle}>Kitchen</span> 
+                <img className={style.productImage} src="/client/images/kitchen/kitchen_1.jpg" />
+              </div>
+          </Link>
+          <Link to="/products/bedroom">
+            <div className={style.productItem}>
+                <span className={style.groupTitle}>Bedroom</span> 
+                <img className={style.productImage} src="/client/images/kitchen/kitchen_1.jpg" />
+              </div>
+          </Link>
+        </div>
       </div>
     )
   }

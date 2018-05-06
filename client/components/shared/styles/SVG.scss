@@ -1,9 +1,26 @@
-.star {
+@mixin icon {	
   width: 20px;
   height: 20px;
+  padding: 0 5px;
+  align-self: center;
+}
+
+.star {
+  @include icon;
 }
 
 .remove {
-  width: 15px;
-  height: 15px;
+  @include icon;
+}
+
+.home {
+  @include icon;
+}
+
+.products {
+  @include icon;
+}
+
+.menu {
+  @include icon;
 }

@@ -2,54 +2,69 @@
   "kitchen": [
     {
       "id": "100",
-      "title": "Kitchen",
-      "price": "900 EUR",
+      "title": "Kitchen 'Mila'",
+      "price": "1340 EUR",
       "sale" : true,
-      "salePrice" : "810 EUR",
+      "salePrice" : "980 EUR",
       "discount": 10,
       "size": "251/155/79H",
-      "material": "TEXTILE/ECO LEATHER",
-      "color": "WHITE/GREY",
+      "material": "STAINLESS STEEL",
+      "color": "WHITE/LIGHT",
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find Kitchen that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/kitchen/kitchen_1.jpg"
+      "image": "/client/images/kitchen/kitchen_1.jpg",
+      "gallery": [
+        "/client/images/kitchen/kitchen_1_1.jpg",
+        "/client/images/kitchen/kitchen_1_2.jpg",
+        "/client/images/kitchen/kitchen_1_3.jpg"
+      ]
     },
     {
       "id": "101",
-      "title": "Kitchen",
-      "price": "900 EUR",
-      "sale" : true,
-      "salePrice" : "810 EUR",
+      "title": "BENCH 'Terra'",
+      "price": "110 EUR",
+      "sale" : false,
+      "salePrice" : "60 EUR",
       "discount": 10,
       "size": "251/155/79H",
-      "material": "TEXTILE/ECO LEATHER",
-      "color": "WHITE/GREY",
+      "material": "WOOD",
+      "color": "BROWN/GREY",
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find Kitchen that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/kitchen/kitchen_2.jpg"
+      "image": "/client/images/kitchen/kitchen_2.jpg",
+      "gallery": [
+        "/client/images/kitchen/kitchen_2_1.jpg",
+        "/client/images/kitchen/kitchen_2_2.jpg",
+        "/client/images/kitchen/kitchen_2_3.jpg"
+      ]
     },
     {
       "id": "102",
-      "title": "Kitchen",
-      "price": "900 EUR",
-      "sale" : true,
-      "salePrice" : "810 EUR",
+      "title": "Kitchen 'Livorno'",
+      "price": "960 EUR",
+      "sale" : false,
+      "salePrice" : "510 EUR",
       "discount": 10,
       "size": "251/155/79H",
-      "material": "TEXTILE/ECO LEATHER",
+      "material": "WOOD",
       "color": "WHITE/GREY",
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find Kitchen that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/kitchen/kitchen_3.jpg"
+      "image": "/client/images/kitchen/kitchen_3.jpg",
+      "gallery": [
+        "/client/images/kitchen/kitchen_3_1.jpg",
+        "/client/images/kitchen/kitchen_3_2.jpg",
+        "/client/images/kitchen/kitchen_3_3.jpg"
+      ]
     },
     {
       "id": "103",
-      "title": "Kitchen",
-      "price": "900 EUR",
-      "sale" : true,
+      "title": "Kitchen 'BLACK'",
+      "price": "1200 EUR",
+      "sale" : false,
       "salePrice" : "810 EUR",
       "discount": 10,
       "size": "251/155/79H",
@@ -58,11 +73,16 @@
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find Kitchen that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/kitchen/kitchen_4.jpg"
+      "image": "/client/images/kitchen/kitchen_4.jpg",
+      "gallery": [
+        "/client/images/kitchen/kitchen_4_1.jpg",
+        "/client/images/kitchen/kitchen_4_2.jpg",
+        "/client/images/kitchen/kitchen_4_3.jpg"
+      ]
     },
     {      
       "id": "104",
-      "title": "Kitchen",
+      "title": "Kitchen 'Smile'",
       "price": "900 EUR",
       "sale" : true,
       "salePrice" : "810 EUR",
@@ -73,13 +93,18 @@
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find Kitchen that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/kitchen/kitchen_5.jpg"
+      "image": "/client/images/kitchen/kitchen_5.jpg",
+      "gallery": [
+        "/client/images/kitchen/kitchen_5_1.jpg",
+        "/client/images/kitchen/kitchen_5_2.jpg",
+        "/client/images/kitchen/kitchen_5_3.jpg"
+      ]
     },
     {
       "id": "105",
-      "title": "Kitchen",
-      "price": "900 EUR",
-      "sale" : true,
+      "title": "Kitchen 'Day'",
+      "price": "679 EUR",
+      "sale" : false,
       "salePrice" : "810 EUR",
       "discount": 10,
       "size": "251/155/79H",
@@ -88,7 +113,12 @@
       "packeges": 2,
       "weight": "136 kg.",
       "description": "Be sure to find Kitchen that suit your own unique style – from classic to contemporary, from minimalist to decorative.",
-      "image": "/client/images/kitchen/kitchen_6.jpg"
+      "image": "/client/images/kitchen/kitchen_6.jpg",
+      "gallery": [
+        "/client/images/kitchen/kitchen_6_1.jpg",
+        "/client/images/kitchen/kitchen_6_2.jpg",
+        "/client/images/kitchen/kitchen_6_3.jpg"
+      ]
     }
   ]
 }

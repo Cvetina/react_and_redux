@@ -17,7 +17,7 @@
   border-bottom: 5px solid $main-nav-border-color;
 }
 
-.navItem {
+.navItem, .navItemMobile {
   @extend %flex-container-row-center;
   @extend %flex-item-1;
   color: $main-nav-color;
@@ -27,7 +27,15 @@
   &:hover, &.current {
     background-color: $main-nav-active-link-bg;
     color: $main-nav-active-link-color;
+
+    svg path {
+      fill: $main-nav-active-link-color;
+    }
   }
+}
+
+.navItemMobile { 
+  display: none;
 }
 
 .favouritesCount {
@@ -43,4 +51,22 @@
   text-align: center;
   border-radius: 18px;
   transition: background .3s ease;
+}
+
+.icon {
+  display: none;
+}
+
+@media (max-width: 567px) {
+  .text {
+    display: none;
+  }
+
+  .navItemMobile, .navItem {
+    border-right: 1px solid  $main-nav-border-color;
+  }
+
+  .navItemMobile {
+    display: flex;
+  }
 }

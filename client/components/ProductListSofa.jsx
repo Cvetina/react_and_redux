@@ -4,7 +4,6 @@ import { connect } from "react-redux"
 import classNames from "classNames"
 import  { loadProducts }  from '../API/httpRequests'
 import  { addFavourites }  from '../actions/favouritesActions'
-import  { toggleActiveFavourites }  from '../actions/uiActions'
 import LeftSidebar from './LeftSidebar'
 import Star from './shared/Star'
 import style from './styles/ProductList'
@@ -12,7 +11,7 @@ import style from './styles/ProductList'
 @connect((store) => {
   return {
     products: store.products.products,
-    toggleFavourites: store.ui.toggleActiveFavourites
+    toggleFavourites: store.ui.toggleMenu
   };
 })
 class ProductListSofa extends React.Component {
@@ -22,7 +21,6 @@ class ProductListSofa extends React.Component {
 
   addItemToFavourites(item, index) {
     this.props.dispatch(addFavourites(item, index));
-    this.props.dispatch(toggleActiveFavourites());
   }
 
   render() {
@@ -30,8 +28,8 @@ class ProductListSofa extends React.Component {
 
     return   (
       <div className={style.container}>
-        {
-          products && <LeftSidebar sofaItems={products.sofa} />
+        {products &&
+         <LeftSidebar sofaItems={products.sofa} toggleMenu={toggleFavourites} />
         }
         {!products &&
           <div className={style.loader}>
@@ -47,7 +45,7 @@ class ProductListSofa extends React.Component {
                     {item.title}
                     <button
                       title="Add to favourites list"
-                      className={classNames(style.buttonAdd, { [style.selected]: toggleFavourites })}
+                      className={style.buttonAdd}
                       onClick={() => this.addItemToFavourites(item, index)} 
                     >
                     <Star />
@@ -55,7 +53,12 @@ class ProductListSofa extends React.Component {
                   </span> 
                   <img className={style.productImage} src={item.image} />
                   <div className={style.productDescription}>
-                    <h3>{item.price}</h3>
+                    <h3 className={classNames(style.price, { [style.strike]: item.sale})}>
+                      {item.price}
+                      {item.sale &&
+                        <span className={style.sale} >{item.salePrice}</span>
+                      }
+                    </h3>
                     <h4>{item.material} {item.color}</h4>
                     <p>Description: {item.description}</p>
                   </div>

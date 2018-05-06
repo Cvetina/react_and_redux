@@ -3,6 +3,14 @@
 .container {
   @extend %flex-container-row-center;
   min-width: calc(100% - 200px);
+
+  @media all and (max-width: 567px) {
+    min-width: 100%;
+  }
+}
+
+.mainContainer {
+  @extend %flex-container-row-center;
 }
 
 .productContainer {
@@ -14,19 +22,46 @@
 
 .productItem {
   @extend %flex-container-column;
+  background-color: $product-item-container-bg;
   margin: 10px;
   width: 300px;
+  box-shadow: 5px 5px 20px -5px rgba(0,0,0,0.3);
+
+  &:nth-child(odd) {
+    .productImage {
+      order: 2;
+    }
+  }
+}
+
+.price {  
+  @extend %flex-container-row-flex-start;
+  position: relative;
+
+  &.strike {
+    text-decoration: line-through;
+  }
+  
+  .sale {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 100%;
+    font-size: 12px;
+    background-color: $product-sale-bg-color;
+    color: $product-sale-color;
+    text-align: center;
+    border-bottom: 3px solid $product-image-border-bottom-color;
+  }
 }
 
 .buttonAdd {
-  background: none;
   margin: 0 5px;
   padding: 0 2px;
-  border: 1px solid $product-favourite-button-border;
   border-radius: 100%;
-  outline: none;
-  vertical-align: middle;
-  cursor: pointer;
   transition: background .3s ease;
 
   &:hover, &.selected {
@@ -46,12 +81,12 @@
 }
 
 .title {
-  margin-bottom: 5px;
-  text-indent: 10%;
+  @extend %flex-container-row-center ;
+  padding: 5px 10px;
   color: $product-title-color;
   background-color: $product-title-bg-color;
-  border-top: 3px solid $product-title-border-color;
   text-transform: uppercase;
+  align-items: center;
 }
 
 .groupTitle {
@@ -59,7 +94,6 @@
   padding: 5px;
   color: $product-title-color;
   background-color: $product-title-bg-color;
-  border-top: 3px solid $product-title-border-color;
   text-transform: uppercase;
   text-align: center;
 }

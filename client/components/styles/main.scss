@@ -8,6 +8,16 @@ body {
 a {
   text-decoration: none;
 }
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+$mobile: '(max-width: 567px)';
+
 /* flex box model */
 
 @for $i from 1 through 10 {
@@ -43,6 +53,12 @@ a {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+%flex-container-row-flex-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 /* Loader */

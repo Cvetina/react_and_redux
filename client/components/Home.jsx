@@ -3,11 +3,13 @@ import { dispatch } from 'redux'
 import { connect } from "react-redux"
 import  { loadMainSliderImages }  from '../API/httpRequests'
 import MainSlider from './MainSlider'
+import LeftSidebar from './LeftSidebar'
 import style from './styles/Home'
 
 @connect((store) => {
   return {
-    images: store.images.images
+    images: store.images.images,
+    toggleFavourites: store.ui.toggleMenu
   };
 })
 class Home extends React.Component {   
@@ -16,10 +18,13 @@ class Home extends React.Component {
     }
 
     render() {
-      const { images } = this.props;
+      const { images, toggleFavourites } = this.props;
 
       return (
         <div className={style.mainContainer}>
+          <div className={style.mobileLeftSidebar} >
+            <LeftSidebar toggleMenu={toggleFavourites} />
+          </div>
           {!images &&
             <div className={style.loader}>
               <div className={style.loaderCubeOne} />
