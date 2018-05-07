@@ -17,7 +17,6 @@ import style from './styles/ProductList'
     products: store.products.products,
     toggleMenu: store.ui.toggleMenu,
     itemID: store.ui.itemID
-
   };
 })
 class ProductListKitchen extends React.Component {
@@ -43,7 +42,8 @@ class ProductListKitchen extends React.Component {
     return   (
       <div className={style.container}>
         {products &&
-          <LeftSidebar kitchenItems={products.kitchen} toggleMenu={toggleMenu} />
+          <LeftSidebar toggleMenu={toggleMenu}
+        />
         }
         {!products &&
           <div className={style.loader}>

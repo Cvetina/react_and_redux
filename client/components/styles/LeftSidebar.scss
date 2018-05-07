@@ -9,6 +9,7 @@
     @media (max-width: 567px) {
         position: absolute;
         left: -200px;
+        top: 40px;
         background-color: $left-sidebar-bg-color;
         transition: all .3s ease;
         z-index: 1;
@@ -28,11 +29,13 @@
     padding: 5px;
     line-height: 30px;
     border-left: 4px solid $left-sidebar-link-border-color;
-    border-bottom: 1px solid $paper;
+    border-bottom: 1px solid $white;
     transition: all .3s ease;
 
     &:hover, &:focus, &:active, &.current  {
         border-left: 4px solid $left-sidebar-link-border-color-current;
+        background-color: transparent;
+        color: $charcoal;
     }
 }
 
@@ -40,11 +43,6 @@
     .navItem {
         background-color: $left-sidebar-bg-color;
         color: $left-sidebar-link-color-mobile;
-    
-        &:hover, &:focus, &:active, &.currnet {
-            background-color: $left-sidebar-bg-color-hover;
-            color: $left-sidebar-color-hover;
-        }
     }
 }
 

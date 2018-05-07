@@ -19,12 +19,10 @@ $favourites-count-border-color: $white;
 /*left sidebar*/
 $left-sidebar-bg-color: $charcoal;
 $left-sidebar-link-color: $charcoal;
-$left-sidebar-link-color-mobile: $silk;
+$left-sidebar-link-color-mobile: $charcoal;
 $left-sidebar-link-border-color: $paper; 
 $left-sidebar-link-border-color-current: $charcoal; 
-$left-sidebar-bg-color: $charcoal; 
-$left-sidebar-bg-color-hover: $paper; 
-$left-sidebar-color-hover: $charcoal;
+$left-sidebar-bg-color: $paper;
 
 /* product list colors */
 $product-item-container-bg: $silk;
@@ -41,8 +39,9 @@ $product-sale-bg-color: $charcoal;
 $product-sale-color: $white;
 
 $product-show-button-bg: $white;
-$product-show-button-bg-hover: $light-gray;
+$product-show-button-bg-hover: $charcoal;
 $product-show-button-color: $charcoal;
+$product-show-button-color-hover: $paper;
 
 /* footer colors */
 $footer-color: $charcoal;

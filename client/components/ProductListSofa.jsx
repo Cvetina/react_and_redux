@@ -40,7 +40,7 @@ class ProductListSofa extends React.Component {
     return   (
       <div className={style.container}>
         {products &&
-         <LeftSidebar sofaItems={products.sofa} toggleMenu={toggleMenu} />
+        <LeftSidebar toggleMenu={toggleMenu} />
         }
         {!products &&
           <div className={style.loader}>
