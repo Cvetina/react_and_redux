@@ -12,7 +12,7 @@ import style from './styles/MainNav'
   return {
     favourites: store.favourites.items,
     products: store.products.products,
-    toggleFavourites: store.ui.toggleMenu
+    toggleMenu: store.ui.toggleMenu
   };
 })
 class MainNav extends React.Component {   
@@ -29,15 +29,15 @@ class MainNav extends React.Component {
             <button className={style.navItemMobile} onClick={() => this.toggleMenu()}><Menu /></button>
           }
           <NavLink exact activeClassName={style.current} className={style.navItem} to="/">
-            <Home className={style.icon} />
+            <span className={style.icon}><Home /></span>
             <span className={style.text}>Home</span>
           </NavLink>
           <NavLink exact activeClassName={style.current} className={style.navItem} to="/products">
-            <Products className={style.icon} />
+            <span className={style.icon}><Products /></span>
             <span className={style.text}>Product List</span>
           </NavLink>
           <NavLink exact activeClassName={style.current} className={style.navItem} to="/favourites">
-            <Star className={style.icon} />
+            <span className={style.icon}><Star /></span>
             <span className={style.text}>Favourites</span>
             {favourites.length > 0 &&
              <span className={style.favouritesCount}>{favourites.length}</span>

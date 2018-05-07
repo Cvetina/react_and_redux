@@ -6,14 +6,18 @@ import classNames from "classNames"
 import  { loadProducts }  from '../API/httpRequests'
 import  { addFavourites }  from '../actions/favouritesActions'
 import  { toggleMenu }  from '../actions/uiActions'
+import  { showSingleProductModal, hideSingleProductModal }  from '../actions/uiActions'
 import LeftSidebar from './LeftSidebar'
+import SingleProduct from './SingleProduct'
 import Star from './shared/Star'
 import style from './styles/ProductList'
 
 @connect((store) => {
   return {
     products: store.products.products,
-    toggleFavourites: store.ui.toggleMenu
+    toggleMenu: store.ui.toggleMenu,
+    itemID: store.ui.itemID
+
   };
 })
 class ProductListKitchen extends React.Component {
@@ -25,13 +29,21 @@ class ProductListKitchen extends React.Component {
     this.props.dispatch(addFavourites(item, index));
   }
 
+  showSingleProductModal(item) {
+    this.props.dispatch(showSingleProductModal(item));
+  }
+
+  hideSingleProductModal() {
+    this.props.dispatch(hideSingleProductModal());
+  }
+
   render() {
-    const { products, toggleFavourites } = this.props
+    const { products, toggleMenu, toggleSingleProductMenu, itemID } = this.props
   
     return   (
       <div className={style.container}>
         {products &&
-          <LeftSidebar kitchenItems={products.kitchen} toggleMenu={toggleFavourites} />
+          <LeftSidebar kitchenItems={products.kitchen} toggleMenu={toggleMenu} />
         }
         {!products &&
           <div className={style.loader}>
@@ -55,15 +67,29 @@ class ProductListKitchen extends React.Component {
                   </span> 
                   <img className={style.productImage} src={item.image} />
                   <div className={style.productDescription}>
-                    <h3 className={classNames(style.price, { [style.strike]: item.sale})}>
+                    <h4 className={classNames(style.price, { [style.strike]: item.sale})}>
                       {item.price}
                       {item.sale &&
                         <span className={style.sale} >{item.salePrice}</span>
                       }
-                    </h3>
+                    </h4>
                     <h4>{item.material} {item.color}</h4>
                     <p>Description: {item.description}</p>
                   </div>
+                  <button
+                    title={`Show me ${item.title}`}
+                    className={style.buttonShow}
+                    onClick={() => this.showSingleProductModal(item)} 
+                    >
+                    Show more
+                  </button>
+                  {itemID === item.id &&
+                    <SingleProduct 
+                      showModal={itemID === item.id}
+                      hideModal={() => this.hideSingleProductModal()}
+                      item={item}
+                    />
+                  }
                 </div>)
             }
         </div>

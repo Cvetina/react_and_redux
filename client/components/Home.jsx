@@ -9,7 +9,7 @@ import style from './styles/Home'
 @connect((store) => {
   return {
     images: store.images.images,
-    toggleFavourites: store.ui.toggleMenu
+    toggleMenu: store.ui.toggleMenu
   };
 })
 class Home extends React.Component {   
@@ -18,12 +18,12 @@ class Home extends React.Component {
     }
 
     render() {
-      const { images, toggleFavourites } = this.props;
+      const { images, toggleMenu } = this.props;
 
       return (
         <div className={style.mainContainer}>
           <div className={style.mobileLeftSidebar} >
-            <LeftSidebar toggleMenu={toggleFavourites} />
+            <LeftSidebar toggleMenu={toggleMenu} />
           </div>
           {!images &&
             <div className={style.loader}>

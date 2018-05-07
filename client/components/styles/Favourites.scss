@@ -17,6 +17,8 @@
 
 .buttonRemove {
   transition: all .3s ease;
+  line-height: 0.8;
+
   &:hover {
     svg path {
       fill: $product-favourite-icon-hover-color;
@@ -24,7 +26,20 @@
   }
 }
 
+.buttonShow {
+  background-color: $product-show-button-bg !important;
+  color: $product-show-button-color;
+  padding: 5px;
+  transition: all .3s ease;
+
+  &:hover {
+    background-color: $product-show-button-bg-hover !important;
+  }
+}
+
 .message {
+  @extend %flex-container-row-center;
+  align-items: center;
   padding: 20px;
   width: 100%;
   text-align: center;

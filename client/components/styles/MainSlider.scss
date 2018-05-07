@@ -1,3 +1,17 @@
 @import './main.scss';
 
+ :global {
+    .slick-slider {
+        margin-bottom: 10px;
+    }
+
+    .slick-dots {
+        bottom: 0;
+        background-color: $white-transparent-20;
+    }
+
+    .slick-dots li button:before {
+        font-size: 12px;
+    }
+ }
 

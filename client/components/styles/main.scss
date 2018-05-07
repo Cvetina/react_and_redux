@@ -6,14 +6,14 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 button {
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer !important;
 }
 
 $mobile: '(max-width: 567px)';
@@ -122,3 +122,4 @@ $mobile: '(max-width: 567px)';
     -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
     clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
   }
+  

@@ -1,10 +1,10 @@
-$page-gold: #C0B283;
 $silk: #DCD0C0;
 $light-gray: #bdbabb;
 $paper: #F4F4f4;
 $white: #ffffff;
 $charcoal: #373737;
-$transparent: rgba(255, 255, 255, 0);
+$white-transparent-20:  rgba(255, 255, 255, 0.2);
+$transparent: rgba(185, 85, 85, 0);
 
 /* main nav colors */
 $main-nav-bg: $silk;
@@ -40,8 +40,11 @@ $product-favourite-button-border: $charcoal;
 $product-sale-bg-color: $charcoal;
 $product-sale-color: $white;
 
+$product-show-button-bg: $white;
+$product-show-button-bg-hover: $light-gray;
+$product-show-button-color: $charcoal;
+
 /* footer colors */
-$footer-bg-color: $silk;
 $footer-color: $charcoal;
 $footer-item-border-color:  $charcoal;
 $footer-link-color:  $charcoal;

@@ -3,7 +3,7 @@
 .container {
   @extend %flex-container-row-center;
 
-  @media all and (max-width: 567px) {
+  @media (max-width: 567px) {
     min-width: 100%;
   }
 }
@@ -46,8 +46,8 @@
     position: absolute;
     top: -10px;
     right: 10px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     padding: 5px;
     border-radius: 100%;
     font-size: 12px;
@@ -62,10 +62,22 @@
   margin: 0 5px;
   padding: 0 2px;
   border-radius: 100%;
-  transition: background .3s ease;
+  transition: all .3s ease;
+  line-height: 0.8;
 
   &:hover, &.selected {
     background-color: $product-favourite-button-bg;
+  }
+}
+
+.buttonShow {
+  background-color: $product-show-button-bg !important;
+  color: $product-show-button-color;
+  padding: 5px;
+  transition: all .3s ease;
+
+  &:hover {
+    background-color: $product-show-button-bg-hover !important;
   }
 }
 
@@ -82,7 +94,7 @@
 
 .title {
   @extend %flex-container-row-center ;
-  padding: 5px 10px;
+  padding: 10px;
   color: $product-title-color;
   background-color: $product-title-bg-color;
   text-transform: uppercase;
@@ -90,7 +102,6 @@
 }
 
 .groupTitle {
-  margin-bottom: 5px;
   padding: 5px;
   color: $product-title-color;
   background-color: $product-title-bg-color;

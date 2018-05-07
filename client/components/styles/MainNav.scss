@@ -19,6 +19,7 @@
 
 .navItem, .navItemMobile {
   @extend %flex-container-row-center;
+  align-items: center;
   @extend %flex-item-1;
   color: $main-nav-color;
   text-transform: uppercase;
@@ -42,11 +43,11 @@
   background-color: $favourites-count-bg;
   margin: auto 5px;
   color: $favourites-count-color;
-  width: 18px;
-  height: 18px;
+  width: 25px;
+  height: 25px;
   border: 1px solid $favourites-count-border-color;
-  line-height: 1.5;
-  font-size: 12px;
+  line-height: 1.6;
+  font-size: 14px;
   font-weight: 700;
   text-align: center;
   border-radius: 18px;
@@ -61,6 +62,11 @@
   .text {
     display: none;
   }
+
+  .icon {
+    display: flex;
+  }
+  
 
   .navItemMobile, .navItem {
     border-right: 1px solid  $main-nav-border-color;

@@ -6,7 +6,7 @@ import { connect } from "react-redux"
 @connect((store) => {
     return {
       products: store.products.products,
-      toggleFavourites: store.ui.toggleMenu
+      toggleMenu: store.ui.toggleMenu
     };
   })
   class ProductItem extends React.Component {

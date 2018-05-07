@@ -4,6 +4,7 @@ import { connect } from "react-redux"
 import classNames from "classNames"
 import  { loadProducts }  from '../API/httpRequests'
 import  { addFavourites }  from '../actions/favouritesActions'
+import  { showSingleProductModal, hideSingleProductModal }  from '../actions/uiActions'
 import LeftSidebar from './LeftSidebar'
 import SingleProduct from './SingleProduct'
 import Star from './shared/Star'
@@ -12,7 +13,8 @@ import style from './styles/ProductList'
 @connect((store) => {
   return {
     products: store.products.products,
-    toggleFavourites: store.ui.toggleMenu
+    toggleMenu: store.ui.toggleMenu,
+    itemID: store.ui.itemID
   };
 })
 class ProductListSofa extends React.Component {
@@ -24,13 +26,21 @@ class ProductListSofa extends React.Component {
     this.props.dispatch(addFavourites(item, index));
   }
 
-  render() {
-    const { products, toggleFavourites } = this.props
+  showSingleProductModal(item) {
+    this.props.dispatch(showSingleProductModal(item));
+  }
 
+  hideSingleProductModal() {
+    this.props.dispatch(hideSingleProductModal());
+  }
+
+  render() {
+    const { products, toggleMenu, itemID } = this.props;
+  
     return   (
       <div className={style.container}>
         {products &&
-         <LeftSidebar sofaItems={products.sofa} toggleMenu={toggleFavourites} />
+         <LeftSidebar sofaItems={products.sofa} toggleMenu={toggleMenu} />
         }
         {!products &&
           <div className={style.loader}>
@@ -54,17 +64,30 @@ class ProductListSofa extends React.Component {
                   </span> 
                   <img className={style.productImage} src={item.image} />
                   <div className={style.productDescription}>
-                    <h3 className={classNames(style.price, { [style.strike]: item.sale})}>
+                    <h4 className={classNames(style.price, { [style.strike]: item.sale})}>
                       {item.price}
                       {item.sale &&
                         <span className={style.sale} >{item.salePrice}</span>
                       }
-                    </h3>
+                    </h4>
                     <h4>{item.material} {item.color}</h4>
                     <p>Description: {item.description}</p>
                   </div>
-                  <SingleProduct item={item} />
-                </div>)
+                  <button
+                    title={`Show me ${item.title}`}
+                    className={style.buttonShow}
+                    onClick={() => this.showSingleProductModal(item)} 
+                    >
+                    Show more
+                  </button>
+                  {itemID === item.id &&
+                    <SingleProduct 
+                      showModal={itemID === item.id}
+                      hideModal={() => this.hideSingleProductModal()}
+                      item={item}
+                    />
+                  }
+              </div>)
             }
         </div>
       </div>

@@ -1,7 +1,9 @@
 import React from "react"
 import { connect } from "react-redux"
 import  { removeFavourites }  from '../actions/favouritesActions'
+import  { showSingleProductModal, hideSingleProductModal }  from '../actions/uiActions'
 import LeftSidebar from './LeftSidebar'
+import SingleProduct from './SingleProduct'
 import Remove from './shared/Remove'
 import Star from './shared/Star'
 import style from './styles/Favourites'
@@ -9,22 +11,31 @@ import style from './styles/Favourites'
 @connect((store) => {
   return {
     favourites: store.favourites.items,
-    toggleFavourites: store.ui.toggleMenu
+    toggleMenu: store.ui.toggleMenu,
+    itemID: store.ui.itemID
   };
 })
 class Favourites extends React.Component {  
     removeItemFromFavourites(item, index) {
       this.props.dispatch(removeFavourites(item, index));
     }
+    
+    showSingleProductModal(item) {
+      this.props.dispatch(showSingleProductModal(item));
+    }
+
+    hideSingleProductModal() {
+      this.props.dispatch(hideSingleProductModal());
+    }
 
     render() {
-      const { favourites, toggleFavourites } = this.props;
+      const { favourites, toggleMenu, itemID } = this.props;
       return (
         <div className={style.container}>
-          <LeftSidebar  toggleMenu={toggleFavourites} />
+          <LeftSidebar  toggleMenu={toggleMenu} />
           <div className={style.containerFavourites}>
             {favourites.length === 0 &&
-              <h3 className={style.message}><Star />Select your Favourites from Product List Categories</h3>
+              <h5 className={style.message}><Star />Select your Favourites from Product List Categories</h5>
             }
             {favourites &&
               favourites.map((item, index) => 
@@ -41,6 +52,20 @@ class Favourites extends React.Component {
                     <h4>{item.material} {item.color}</h4>
                     <p>Description: {item.description}</p>
                   </div>
+                  <button
+                    title={`Show me ${item.title}`}
+                    className={style.buttonShow}
+                    onClick={() => this.showSingleProductModal(item)} 
+                    >
+                    Show more
+                  </button>
+                  {itemID === item.id &&
+                    <SingleProduct 
+                      showModal={itemID === item.id}
+                      hideModal={() => this.hideSingleProductModal()}
+                      item={item}
+                    />
+                  }
                 </div>)
             }
           </div>

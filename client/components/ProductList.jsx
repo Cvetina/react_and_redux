@@ -6,16 +6,16 @@ import style from './styles/ProductList'
 
 @connect((store) => {
   return {
-    toggleFavourites: store.ui.toggleMenu
+    toggleMenu: store.ui.toggleMenu
   };
 })
 class ProductList extends React.Component {
   render() {
-    const { products, toggleFavourites } = this.props
+    const { products, toggleMenu } = this.props
 
     return   (
       <div className={style.mainContainer}>
-        <LeftSidebar toggleMenu={toggleFavourites} />
+        <LeftSidebar toggleMenu={toggleMenu} />
         <div className={style.productContainer}>
           <Link to="/products/sofa">
             <div className={style.productItem}>
