@@ -8,9 +8,9 @@ export default class Footer extends React.Component {
         <div className={style.container}>
           <div className={style.containerItem}>
             <h3>Contact us</h3>
-            <p><b>Phone:</b> 000/010 202 303</p>
-            <p><b>Email:</b> test@example.io</p>
-            <p><b>Address:</b> My Address</p>
+            <p><b>Phone: </b> 000/010 202 303</p>
+            <p><b>Email: </b><a href="mailto:test@example.io">test@example.io</a></p>
+            <p><b>Address: </b> My Address</p>
           </div>
           <div className={style.containerItem}>
             <h3>Useful Links</h3>

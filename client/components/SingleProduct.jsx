@@ -14,12 +14,12 @@ function SingleProduct(props) {
         <Modal.Title>
         <Button onClick={props.hideModal}><Remove /></Button>
         {props.item.title}
-        <h3 className={classNames(style.price, { [style.strike]: props.item.sale})}>
+        <p className={classNames(style.price, { [style.strike]: props.item.sale})}>
           Price:{props.item.price}
           {props.item.sale &&
             <span className={style.sale} >{props.item.salePrice}</span>
           }
-        </h3>
+        </p>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body> 

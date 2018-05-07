@@ -3,7 +3,7 @@
     {
       "id": "01",
       "title": "Sofa",
-      "price": "6200 EUR",
+      "price": "1350 EUR",
       "sale" : false,
       "salePrice" : "810 EUR",
       "discount": 10,

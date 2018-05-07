@@ -4,7 +4,7 @@
     @extend %flex-container-column;
     align-self: stretch;
     min-width: 200px;
-    padding: 10px 0;
+    padding: 10px;
    
     @media (max-width: 567px) {
         position: absolute;
