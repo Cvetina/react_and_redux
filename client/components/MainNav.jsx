@@ -6,7 +6,6 @@ import Home from './shared/Home'
 import Menu from './shared/Menu'
 import Star from './shared/Star'
 import Products from './shared/Products'
-
 import style from './styles/MainNav'
 
 @connect((store) => {

@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import  { removeFavourites }  from '../actions/favouritesActions'
 import LeftSidebar from './LeftSidebar'
 import Remove from './shared/Remove'
+import Star from './shared/Star'
 import style from './styles/Favourites'
 
 @connect((store) => {
@@ -23,7 +24,7 @@ class Favourites extends React.Component {
           <LeftSidebar  toggleMenu={toggleFavourites} />
           <div className={style.containerFavourites}>
             {favourites.length === 0 &&
-              <div className={style.message}>Select your Favourites from Product List Categories</div>
+              <h3 className={style.message}><Star />Select your Favourites from Product List Categories</h3>
             }
             {favourites &&
               favourites.map((item, index) => 

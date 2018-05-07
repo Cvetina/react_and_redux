@@ -25,7 +25,6 @@
 .navItem {
     @extend %flex-container-column;
     color: $left-sidebar-link-color;
-    background-color: $left-sidebar-bg-color;
     padding: 5px;
     line-height: 30px;
     border-left: 4px solid $left-sidebar-link-border-color;
@@ -35,12 +34,16 @@
     &:hover, &:focus, &:active, &.current  {
         border-left: 4px solid $left-sidebar-link-border-color-current;
     }
+}
 
-    @media (max-width: 567px) {
+@media (max-width: 567px) {
+    .navItem {
+        background-color: $left-sidebar-bg-color;
         color: $left-sidebar-link-color-mobile;
-
+    
         &:hover, &:focus, &:active, &.currnet {
             background-color: $left-sidebar-bg-color-hover;
+            color: $left-sidebar-color-hover;
         }
     }
 }

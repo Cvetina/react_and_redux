@@ -2,7 +2,6 @@
 
 .container {
   @extend %flex-container-row-flex-start;
-  flex-grow: 1;
   width: 100%;
 }
 

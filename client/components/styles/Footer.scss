@@ -4,6 +4,7 @@
 .container {
   @extend %flex-container-row-center-wrap;
   padding: 10px;
+  margin-top: 30px;
   font-family: "Lato";
   background-color: $footer-bg-color;
   color: $footer-color;

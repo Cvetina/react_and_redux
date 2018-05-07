@@ -5,6 +5,7 @@ import classNames from "classNames"
 import  { loadProducts }  from '../API/httpRequests'
 import  { addFavourites }  from '../actions/favouritesActions'
 import LeftSidebar from './LeftSidebar'
+import SingleProduct from './SingleProduct'
 import Star from './shared/Star'
 import style from './styles/ProductList'
 
@@ -62,6 +63,7 @@ class ProductListSofa extends React.Component {
                     <h4>{item.material} {item.color}</h4>
                     <p>Description: {item.description}</p>
                   </div>
+                  <SingleProduct item={item} />
                 </div>)
             }
         </div>
