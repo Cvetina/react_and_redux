@@ -22,7 +22,6 @@
 
 .productItem {
   @extend %flex-container-column;
-  background-color: $product-item-container-bg;
   margin: 10px;
   width: 300px;
   box-shadow: 5px 5px 20px -5px rgba(0,0,0,0.3);
@@ -46,8 +45,8 @@
     position: absolute;
     top: -10px;
     right: 10px;
-    width: 40px;
-    height: 40px;
+    min-width: 60px;
+    line-height: 2;
     padding: 5px;
     border-radius: 100%;
     font-size: 12px;
@@ -73,6 +72,8 @@
 .buttonShow {
   background-color: $product-show-button-bg !important;
   color: $product-show-button-color;
+  border-top: 1px solid $light-gray !important;
+  border-bottom: 1px solid $light-gray !important;
   padding: 5px;
   transition: all .3s ease;
 
@@ -100,6 +101,7 @@
   background-color: $product-title-bg-color;
   text-transform: uppercase;
   align-items: center;
+  font-size: 16px;
 }
 
 .groupTitle {

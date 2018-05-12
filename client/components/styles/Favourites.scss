@@ -29,6 +29,8 @@
 .buttonShow {
   background-color: $product-show-button-bg !important;
   color: $product-show-button-color;
+  border-top: 1px solid $light-gray !important;
+  border-bottom: 1px solid $light-gray !important;
   padding: 5px;
   transition: all .3s ease;
 
