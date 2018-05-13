@@ -34,6 +34,10 @@
   }
 
   :global {
+    .modal {
+        background: rgba(0, 0, 0, .5);
+    }  
+
     .modal-content {
         background-image: url('/client/images/backgrounds/bg.jpg');
         background-attachment: fixed;

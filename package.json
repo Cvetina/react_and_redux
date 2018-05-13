@@ -49,6 +49,8 @@
   },
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server"
-  }
+    "start": "webpack-dev-server",
+    "production": "webpack -p"
+  },
+  "homepage": "http://cvetina.net/modus/"
 }
