@@ -111,3 +111,9 @@
   text-transform: uppercase;
   text-align: center;
 }
+
+.starButton {
+  &.active svg path {
+    stroke: $product-favourite-select-stroke;
+  }
+}

@@ -14,7 +14,8 @@ import style from './styles/ProductList'
   return {
     products: store.products.products,
     toggleMenu: store.ui.toggleMenu,
-    itemID: store.ui.itemID
+    itemID: store.ui.itemID,
+    favourites: store.favourites.items
   };
 })
 class ProductListSofa extends React.Component {
@@ -35,8 +36,10 @@ class ProductListSofa extends React.Component {
   }
 
   render() {
-    const { products, toggleMenu, itemID } = this.props;
+    const { products, toggleMenu, itemID, favourites } = this.props;
   
+    const favID = favourites.map((favourite) => favourite.id);
+    
     return   (
       <div className={style.container}>
         {products &&
@@ -65,7 +68,10 @@ class ProductListSofa extends React.Component {
                   <img className={style.productImage} src={item.image} />
                   <div className={style.productDescription}>
                     <h4 className={classNames(style.price, { [style.strike]: item.sale})}>
-                      {item.price}
+                      <span className={classNames(style.starButton, { [style.active]: favID.filter((id) => id === item.id).length > 0 })}>
+                        <Star />
+                      </span>
+                      {item.price} 
                       {item.sale &&
                         <span className={style.sale} >{item.salePrice}</span>
                       }

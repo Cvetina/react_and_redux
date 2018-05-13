@@ -7,7 +7,7 @@
     padding: 10px;
    
     @media (max-width: 567px) {
-        position: absolute;
+        position: fixed;
         left: -200px;
         top: 40px;
         background-color: $left-sidebar-bg-color;
