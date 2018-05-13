@@ -113,6 +113,13 @@
 }
 
 .starButton {
+  opacity: 0;
+  transition: opacity .3s ease-in;
+
+  &.active {
+    opacity: 1;
+  }
+
   &.active svg path {
     stroke: $product-favourite-select-stroke;
   }
