@@ -1,11 +1,42 @@
 import React from 'react'
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom'
+import { connect } from "react-redux"
 import classNames from "classNames"
+import onClickOutside from "react-onclickoutside"
+import  { toggleMenu, hideMenu }  from '../actions/uiActions'
+import Menu from './shared/Menu'
+import Remove from './shared/Remove'
 import style from './styles/LeftSidebar'
 
-function LeftSidebar(props) {
+
+@connect((store) => {
+  return {
+    toggleMenu: store.ui.toggleMenu
+  };
+})
+@onClickOutside
+class LeftSidebar extends React.Component {   
+  handleClickOutside (event) {
+    this.props.dispatch(hideMenu());
+  }
+ 
+  toggleMenu (event) {
+    this.props.dispatch(toggleMenu());
+  }
+
+  render() {
+    const { toggleMenu } = this.props;
+    const menuStyle = classNames(style.navContainer, { [style.active]: toggleMenu});
+    const menuIconStyle = classNames(style.navIconMobile, { [style.removeIcon]: toggleMenu});
+
     return (
-      <div className={classNames(style.navContainer, { [style.active]: props.toggleMenu})}>
+      <div className={menuStyle}>
+        <span className={menuIconStyle} onClick={() => this.toggleMenu()}>
+        { toggleMenu
+          ? <Remove />
+          : <Menu />
+        }
+        </span>
         <NavLink exact activeClassName={style.current} className={style.navItem} to="/favourites">
           Favourites
         </NavLink>
@@ -21,5 +52,5 @@ function LeftSidebar(props) {
       </div>
     )
   }
-   
+}  
 export default LeftSidebar

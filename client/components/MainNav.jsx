@@ -1,33 +1,22 @@
 import React from 'react'
 import { connect } from "react-redux"
 import { NavLink } from 'react-router-dom';
-import  { toggleMenu }  from '../actions/uiActions'
 import Home from './shared/Home'
-import Menu from './shared/Menu'
 import Star from './shared/Star'
 import Products from './shared/Products'
 import style from './styles/MainNav'
 
 @connect((store) => {
   return {
-    favourites: store.favourites.items,
-    products: store.products.products,
-    toggleMenu: store.ui.toggleMenu
+    favourites: store.favourites.items
   };
 })
 class MainNav extends React.Component {   
-
-    toggleMenu() {
-      this.props.dispatch(toggleMenu());
-    }
     render() {
-      const { favourites, products } = this.props;
+      const { favourites } = this.props;
   
       return (
         <div className={style.navContainer}>
-          {products &&
-            <button className={style.navItemMobile} onClick={() => this.toggleMenu()}><Menu /></button>
-          }
           <NavLink exact activeClassName={style.current} className={style.navItem} to="/">
             <span className={style.icon}><Home /></span>
             <span className={style.text}>Home</span>

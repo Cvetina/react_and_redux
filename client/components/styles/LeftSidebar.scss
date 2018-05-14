@@ -2,6 +2,7 @@
 
 .navContainer {
     @extend %flex-container-column;
+    position: relative;
     align-self: stretch;
     min-width: 200px;
     padding: 10px;
@@ -11,7 +12,7 @@
         left: -200px;
         top: 40px;
         background-color: $left-sidebar-bg-color;
-        transition: all .3s ease;
+        transition: all .2s ease;
         z-index: 1;
         padding: 0;
 
@@ -21,6 +22,23 @@
         }
     }
 
+}
+
+.navIconMobile {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    top: -43px;
+    right: -140px;
+    right: -60px;
+    width: 60px;
+    height: 40px;
+    z-index: 100;
+    background-color: $main-nav-border-color;
+
+    &.removeIcon {
+        left: 0;
+    }
 }
 
 .navItem {
@@ -39,13 +57,6 @@
     }
 }
 
-@media (max-width: 567px) {
-    .navItem {
-        background-color: $left-sidebar-bg-color;
-        color: $left-sidebar-link-color-mobile;
-    }
-}
-
 .subNavContainer {
     @extend %flex-container-column;
     align-self: stretch;
@@ -56,5 +67,16 @@
 
     .navItem {
         padding-left: 15px; 
+    }
+}
+
+@media (max-width: 567px) {
+    .navItem {
+        background-color: $left-sidebar-bg-color;
+        color: $left-sidebar-link-color-mobile;
+    }
+
+    .navIconMobile {
+        display: flex;
     }
 }

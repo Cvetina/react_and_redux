@@ -65,7 +65,10 @@
   .icon {
     display: flex;
   }
-  
+
+  .navContainer {
+    padding-left: 60px;
+  }
 
   .navItemMobile, .navItem {
     border-right: 1px solid  $main-nav-border-color;
