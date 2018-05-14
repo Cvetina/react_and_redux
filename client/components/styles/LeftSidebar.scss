@@ -28,13 +28,14 @@
     display: none;
     position: absolute;
     justify-content: center;
-    top: -43px;
+    top: -42px;
     right: -140px;
     right: -60px;
     width: 60px;
     height: 40px;
     z-index: 100;
-    background-color: $main-nav-border-color;
+    background-color: $left-sidebar-mobile-icon-bg-color;
+    cursor: pointer;
 
     &.removeIcon {
         left: 0;
