@@ -1,15 +1,16 @@
 const path = require('path');
-
+const webpack = require('webpack');
 const HTMLWebpackPlugin =  require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const ExtractHTMLWebpackPlugin = new HTMLWebpackPlugin({
   title: 'React-Redux App',
-  template: __dirname + '/client/index.html',
+  template:  path.resolve(__dirname + '/client/index.html'),
   filename: 'index.html',
-  favicon: __dirname + '/client/images/favicon.png',
-  inject: 'body',
-  hash: true
+  favicon: path.resolve(__dirname + '/client/images/favicon.png'),
+  inject: 'body'
 })
 
 const ExtractTextPluginStyles = new MiniCssExtractPlugin({
@@ -20,16 +21,25 @@ const ExtractTextPluginStyles = new MiniCssExtractPlugin({
 const isDevBuild = () => {
   return (process.env.NODE_ENV === 'development');
 };
+const ExtractUglifyJSPlugin =  new UglifyJSPlugin({include: /\/client/}, {sourceMap: true});
+
+const CopyProjectPaths = new CopyWebpackPlugin([               
+  { from: 'client/images', to: 'client/images' },
+  { from: 'client/data', to: 'client/data' }
+  ]);
+ 
+ const DefineProd = new webpack.DefinePlugin({'process.env':{NODE_ENV:"'production'"}});
 
 module.exports = {
   mode: isDevBuild ? 'development' : 'production',
-  devtool: "source-map",
-  cache: false,
+  cache: true,
+  watch: true,
   devServer: {
-		historyApiFallback: true
+    port: 8181,
+    historyApiFallback: true
   },
   entry: {
-		'app': __dirname + '/client/index.jsx'
+		'app': path.resolve(__dirname + '/client/index.jsx')
 	},
   module: {
     rules: [
@@ -60,12 +70,13 @@ module.exports = {
         }
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        test:  /\.(png|jp(e*)g|svg)$/,
+        exclude: /node_modules/,
         loader: "url-loader",
         query:{
           limit:'10000',
-          name:'[name].[ext]',
-          outputPath:'fonts/'
+          name:'images/[name].[ext]',
+          outputPath:'images/'
         }
       },
       {
@@ -81,20 +92,21 @@ module.exports = {
     ]
   },
   output: {
-		path: __dirname + '/build',
-    filename: '[hash].js',
-    publicPath: '/'
+    filename: '[name].js',
+		path: path.resolve(__dirname + '/build')
   },
   resolve: {
+    modules: [
+      path.resolve(__dirname + '/client'),
+      path.resolve(__dirname + '/node_modules')
+    ], 
     extensions: ['*', '.scss', '.js', '.jsx']
-  },
-  watch: true,
-  devServer: {
-    port: 8181,
-    historyApiFallback: true,
   },
   plugins:[ 
     ExtractHTMLWebpackPlugin,
-    ExtractTextPluginStyles
+    ExtractTextPluginStyles,
+    ExtractUglifyJSPlugin,
+    CopyProjectPaths,
+    DefineProd
   ]
 }

@@ -11,6 +11,8 @@
     "babel-plugin-transform-decorators": "^6.24.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "classnames": "^2.2.5",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
     "cross-fetch": "^2.1.0",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
@@ -34,6 +36,7 @@
     "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^1.0.1",
     "webpack": "^4.3.0",
     "webpack-dev-server": "^3.1.1",
@@ -53,5 +56,5 @@
     "start": "webpack-dev-server",
     "production": "webpack -p"
   },
-  "homepage": "http://cvetina.net/modus/"
+  "homepage": "http://cvetarnica.cvetina.net/"
 }
