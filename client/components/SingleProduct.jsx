@@ -2,7 +2,7 @@ import React from "react"
 import { dispatch } from 'redux'
 import { connect } from "react-redux"
 import classNames from "classNames"
-import { Modal, Button } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap'
 import MainSlider from './MainSlider'
 import Remove from './shared/Remove'
 import style from './styles/SingleProduct'

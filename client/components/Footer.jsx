@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import style from './styles/Footer'
 
 export default class Footer extends React.Component {

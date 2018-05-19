@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Slider from 'react-slick';
+import React, { Component } from 'react'
+import Slider from 'react-slick'
 import style from './styles/MainSlider'
  
 class MainSlider extends React.Component {

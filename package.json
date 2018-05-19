@@ -53,8 +53,8 @@
   },
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server",
-    "production": "webpack -p"
+    "dev": "webpack-dev-server",
+    "prod": "webpack -p"
   },
   "homepage": "http://cvetarnica.cvetina.net/"
 }
