@@ -9,7 +9,7 @@ import style from './styles/SingleProduct'
 
 function SingleProduct(props) {
   return (
-    <Modal.Dialog show={props.showModal}>
+    <Modal.Dialog show={props.showModal} onHide={props.hideModal}>
       <Modal.Header>
         <Modal.Title>
         <div className={style.itemTitle}>

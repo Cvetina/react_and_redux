@@ -14,6 +14,13 @@
   background-color: #F5F5F5;
 }
 
+button {
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer !important;
+}
+
 /* flex box model */
 
 @for $i from 1 through 10 {
