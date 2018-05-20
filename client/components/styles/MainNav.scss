@@ -25,7 +25,18 @@
   text-transform: uppercase;
   transition: background .3s ease;
 
-  &:hover, &.current {
+  @media (hover:hover) {
+    &:hover {
+      background-color: $main-nav-active-link-bg !important;
+      color: $main-nav-active-link-color;
+  
+      svg path {
+        fill: $main-nav-active-link-color;
+      }
+    }
+  }
+
+  &.current {
     background-color: $main-nav-active-link-bg !important;
     color: $main-nav-active-link-color;
 

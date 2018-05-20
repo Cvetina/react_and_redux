@@ -51,11 +51,19 @@
     border-bottom: 1px solid $white;
     transition: all .3s ease;
 
-    &:hover, &:focus, &:active, &.current  {
+    @media (hover:hover) {
+        &:hover, &:focus, &:active  {
+            border-left: 4px solid $left-sidebar-link-border-color-current;
+            background-color: transparent;
+            color: $charcoal;
+        }
+    }
+
+    &.current  {
         border-left: 4px solid $left-sidebar-link-border-color-current;
         background-color: transparent;
         color: $charcoal;
-    }
+    }   
 }
 
 .subNavContainer {

@@ -19,9 +19,11 @@
   transition: all .3s ease;
   line-height: 0.8;
 
-  &:hover {
-    svg path {
-      fill: $product-favourite-icon-hover-color;
+  @media (hover:hover) {
+    &:hover {
+      svg path {
+        fill: $product-favourite-icon-hover-color;
+      }
     }
   }
 }
@@ -34,9 +36,11 @@
   padding: 5px;
   transition: all .3s ease;
 
-  &:hover {
-    background-color: $product-show-button-bg-hover !important;
-    color: $product-show-button-color-hover;
+  @media (hover:hover) {
+    &:hover {
+      background-color: $product-show-button-bg-hover !important;
+      color: $product-show-button-color-hover;
+    }
   }
 }
 

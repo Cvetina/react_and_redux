@@ -64,7 +64,13 @@
   transition: all .3s ease;
   line-height: 0.8;
 
-  &:hover, &.selected {
+  @media (hover:hover) {
+    &:hover {
+      background-color: $product-favourite-button-bg;
+    }
+  }
+
+  &.selected {
     background-color: $product-favourite-button-bg;
   }
 }
@@ -77,9 +83,11 @@
   padding: 5px;
   transition: all .3s ease;
 
-  &:hover {
-    background-color: $product-show-button-bg-hover !important;
-    color: $product-show-button-color-hover;
+  @media (hover:hover) {
+    &:hover {
+      background-color: $product-show-button-bg-hover !important;
+      color: $product-show-button-color-hover;
+    }
   }
 }
 
