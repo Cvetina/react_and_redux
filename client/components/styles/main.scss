@@ -1,26 +1,6 @@
 @import './colors.scss';
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
-::-webkit-scrollbar {
-  width: 8px;
-  background-color: #F5F5F5;
-} 
-
-::-webkit-scrollbar-thumb {
-  background-color: #727272;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #F5F5F5;
-}
-
-button {
-  background: none !important;
-  border: none !important;
-  outline: none !important;
-  cursor: pointer !important;
-}
-
 /* flex box model */
 
 @for $i from 1 through 10 {

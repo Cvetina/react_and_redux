@@ -1,0 +1,41 @@
+@import './colors.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+@media (hover:hover) {
+    a {
+        text-decoration: none !important;
+        color: $charcoal;
+        transition: all .3s ease;
+        
+        &:visited {
+            color: $charcoal;
+        }
+        
+        &:hover,  &:active {
+            color: $mid-gray;
+        }
+    }   
+  }
+
+  button {
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer !important;
+  }
+  
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+  } 
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #727272;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+  }

@@ -89,3 +89,19 @@
         display: flex;
     }
 }
+
+@media (hover:hover) {
+    a {
+      text-decoration: none !important;
+      color: $charcoal;
+      transition: all .3s ease;
+  
+      &:visited {
+        color: $charcoal;
+      }
+  
+      &:hover {
+        color: $silk;
+      }
+    }
+}

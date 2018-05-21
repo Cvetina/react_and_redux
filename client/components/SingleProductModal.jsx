@@ -5,9 +5,9 @@ import classNames from "classNames"
 import { Modal, Button } from 'react-bootstrap'
 import MainSlider from './MainSlider'
 import Remove from './shared/Remove'
-import style from './styles/SingleProduct'
+import style from './styles/SingleProductModal'
 
-function SingleProduct(props) {
+function SingleProductModal(props) {
   return (
     <Modal.Dialog show={props.showModal} onHide={props.hideModal}>
       <Modal.Header>
@@ -47,5 +47,5 @@ function SingleProduct(props) {
   )
 }
  
-export default SingleProduct
+export default SingleProductModal
 

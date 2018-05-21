@@ -6,7 +6,7 @@ import  { loadProducts }  from '../API/httpRequests'
 import  { addFavourites }  from '../actions/favouritesActions'
 import  { showSingleProductModal, hideSingleProductModal }  from '../actions/uiActions'
 import LeftSidebar from './LeftSidebar'
-import SingleProduct from './SingleProduct'
+import SingleProductModal from './SingleProductModal'
 import Star from './shared/Star'
 import style from './styles/ProductList'
 
@@ -62,15 +62,14 @@ class ProductListBedroom extends React.Component {
                     className={style.buttonAdd}
                     onClick={() => this.addItemToFavourites(item, index)} 
                   >
-                    <Star />
+                  <span className={classNames(style.starButton, { [style.active]: favID.filter((id) => id === item.id).length > 0 })}>
+                      <Star />
+                  </span>
                   </button>
                 </span> 
                 <img className={style.productImage} src={item.image} />
                 <div className={style.productDescription}>
                   <h4 className={classNames(style.price, { [style.strike]: item.sale})}>
-                    <span className={classNames(style.starButton, { [style.active]: favID.filter((id) => id === item.id).length > 0 })}>
-                        <Star />
-                    </span>
                     {item.price}
                     {item.sale &&
                       <span className={style.sale} >{item.salePrice}</span>
@@ -87,7 +86,7 @@ class ProductListBedroom extends React.Component {
                     Show more
                 </button>
                 {itemID === item.id &&
-                  <SingleProduct 
+                  <SingleProductModal 
                     showModal={itemID === item.id}
                     hideModal={() => this.hideSingleProductModal()}
                     item={item}

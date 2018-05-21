@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import  { removeFavourites }  from '../actions/favouritesActions'
 import  { showSingleProductModal, hideSingleProductModal }  from '../actions/uiActions'
 import LeftSidebar from './LeftSidebar'
-import SingleProduct from './SingleProduct'
+import SingleProductModal from './SingleProductModal'
 import Remove from './shared/Remove'
 import Star from './shared/Star'
 import style from './styles/Favourites'
@@ -60,7 +60,7 @@ class Favourites extends React.Component {
                     Show more
                   </button>
                   {itemID === item.id &&
-                    <SingleProduct 
+                    <SingleProductModal 
                       showModal={itemID === item.id}
                       hideModal={() => this.hideSingleProductModal()}
                       item={item}
