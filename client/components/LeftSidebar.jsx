@@ -49,6 +49,9 @@ class LeftSidebar extends React.Component {
         <NavLink exact activeClassName={style.current} className={style.navItem} to="/products/bedroom">
           Bedroom
         </NavLink>
+        <NavLink exact activeClassName={style.current} className={style.navItem} to="/products/office">
+          Office
+        </NavLink>
       </div>
     )
   }

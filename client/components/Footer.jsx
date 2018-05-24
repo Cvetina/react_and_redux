@@ -23,6 +23,7 @@ export default class Footer extends React.Component {
             <Link className={style.link} to="/products/sofa">Sofa</Link>
             <Link className={style.link} to="/products/kitchen">Kitchen</Link>
             <Link className={style.link} to="/products/bedroom">Bedroom</Link>
+            <Link className={style.link} to="/products/office">Office</Link>
           </div>
           <div className={style.containerItem}>
             <h3>More Info</h3>

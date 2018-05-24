@@ -32,7 +32,13 @@ class ProductList extends React.Component {
           <Link to="/products/bedroom">
             <div className={style.productItem}>
                 <span className={style.groupTitle}>Bedroom</span> 
-                <img className={style.productImage} src="/client/images/kitchen/kitchen_1.jpg" />
+                <img className={style.productImage} src="/client/images/bedroom/bedroom_1.jpg" />
+              </div>
+          </Link>
+          <Link to="/products/office">
+            <div className={style.productItem}>
+                <span className={style.groupTitle}>Office</span> 
+                <img className={style.productImage} src="/client/images/offices/office_1.jpg" />
               </div>
           </Link>
         </div>
