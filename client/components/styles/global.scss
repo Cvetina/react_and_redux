@@ -1,5 +1,12 @@
 @import './colors.scss';
 
+body {
+    background-image: url("/client/images/backgrounds/bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom center;
+}
+
 * {
     box-sizing: border-box;
 }

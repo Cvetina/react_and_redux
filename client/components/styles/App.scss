@@ -6,9 +6,6 @@
   @extend %flex-container-column;
   justify-content: space-between;
   min-height: 100vh;
-  background-image: url("/client/images/backgrounds/bg.jpg");
-  background-attachment: fixed;
-  background-size: cover;
   padding-top: 60px;
   font-family: "Lato";
 }

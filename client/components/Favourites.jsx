@@ -1,5 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
+import Plx from 'react-plx'
+import { favouritesParallaxEffect } from '../helpers/parallax'
 import  { removeFavourites }  from '../actions/favouritesActions'
 import  { showSingleProductModal, hideSingleProductModal }  from '../actions/uiActions'
 import LeftSidebar from './LeftSidebar'
@@ -35,7 +37,10 @@ class Favourites extends React.Component {
           <LeftSidebar  toggleMenu={toggleMenu} />
           <div className={style.containerFavourites}>
             {favourites.length === 0 &&
-              <h5 className={style.message}><Star />Select your Favourites from Product List Categories</h5>
+              <h5 className={style.message}>
+                <Plx parallaxData={favouritesParallaxEffect}><Star /></Plx>
+                Select your Favourites from Product List Categories
+              </h5>
             }
             {favourites &&
               favourites.map((item, index) => 
