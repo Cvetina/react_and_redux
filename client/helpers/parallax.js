@@ -1,23 +1,25 @@
   export const homePageParallaxEffect = [
     {
-      start: 200,
+      start: 'self',
       end: 300,
+      easing: 'easeInOutCubic',
       properties: [
         {
-          startValue: 0,
-          endValue: 50,
-          property: "translateY"
+          startValue: -2000,
+          endValue: 0,
+          property: "translateX"
         }
       ]
     },
     {
-      start: 350,
-      duration: 200,
+      start: 600,
+      end: 900,
+      easing: 'easeInOutCubic',
       properties: [
         {
-          startValue: 0,
-          endValue: 50,
-          property: "translateY"
+          startValue: 1,
+          endValue: 0,
+          property: "opacity"
         }
       ]
     }
@@ -25,8 +27,9 @@
 
   export const homePageImageParallaxEffect = [
     {
-      start: 450,
+      start: 'self',
       duration: 300,
+      easing: 'easeInOutCubic',
       properties: [
         {
           startValue: 0,
@@ -34,26 +37,27 @@
           property: "opacity"
         },
         {
-          startValue: -980,
+          startValue: -2000,
           endValue: 0,
           property: "translateX"
+        },
+        {
+          startValue: 0,
+          endValue: 1,
+          property: "scaleX"
         }
       ]
     }
   ];
 
-  export const favouritesParallaxEffect = [
+  export const homePageMobileParallaxEffect = [
     {
-      start: 100,
-      end: 300,
+      start: 'self',
+      duration: 300,
+      easing: 'easeInOutCubic',
       properties: [
         {
           startValue: 0,
-          endValue: 100,
-          property: "translateY"
-        },
-        {
-          startValue: 0.75,
           endValue: 1,
           property: "opacity"
         }

@@ -9,6 +9,11 @@
   @extend %flex-container-row-center-wrap;
   width: calc(100% - 200px);
 
+  @media (min-width: 380px) and (max-width: 820px) and (orientation: landscape) {
+    width: 100%;
+    justify-content: center;
+  }
+
   @media screen and (max-width: 567px) {
     width: 100%;
     min-width: initial;
@@ -50,4 +55,9 @@
   padding: 20px;
   width: 100%;
   text-align: center;
+}
+
+.star { 
+  margin: 5px;
+  animation: bounce 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
 }
