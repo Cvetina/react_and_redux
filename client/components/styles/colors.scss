@@ -6,7 +6,7 @@ $white: #ffffff;
 $charcoal: #373737;
 $white-transparent-20:  rgba(255, 255, 255, 0.2);
 $transparent: rgba(185, 85, 85, 0);
-$red: #ff0000;
+$red: #ff0303;
 
 
 /* main nav colors */
@@ -29,10 +29,14 @@ $left-sidebar-bg-color: $paper;
 $left-sidebar-mobile-icon-bg-color: $paper;
 
 /* product list colors */
+%product-image-gradient {
+    background: linear-gradient(to right, $silk 0%, $mid-gray 100%);
+}
+
 $product-title-bg-color: $silk; 
 $product-title-color: $charcoal;
 $product-color: $charcoal; 
-$product-image-border-bottom-color: $silk;
+$product-image-border-color: $silk;
 $product-image-border-top-color: $white;
 $product-description-bg: $paper;
 $product-favourite-button-bg: $paper;
@@ -40,6 +44,7 @@ $product-favourite-icon-hover-color: $paper;
 $product-favourite-button-border: $charcoal;
 $product-favourite-stroke: $charcoal;
 $product-favourite-select-stroke: $red;
+$product-favourite-select-fill: $red;
 $product-sale-bg-color: $charcoal;
 $product-sale-color: $white;
 
@@ -56,4 +61,3 @@ $footer-link-color-hover:  $mid-gray;
 
 /* loader color */
 $loader-bg: $charcoal;
-

@@ -2,7 +2,6 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Home from './Home'
 import MainNav from './MainNav'
-import ProductItem from './ProductItem'
 import ProductList from './ProductList'
 import ProductListSofa from './ProductListSofa'
 import ProductListKitchen from './ProductListKitchen'
@@ -24,7 +23,6 @@ export default class App extends React.Component {
             <Route path='/products/kitchen' component={ProductListKitchen} />
             <Route path='/products/bedroom' component={ProductListBedroom} />
             <Route path='/products/office' component={ProductListOffice} />
-            <Route exact path='/product-item' component={ProductItem} />
             <Route exact path='/favourites' component={Favourites} />
           </Switch>
           <Footer />

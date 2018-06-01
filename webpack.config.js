@@ -28,11 +28,12 @@ const CopyProjectPaths = new CopyWebpackPlugin([
   { from: 'client/data', to: 'client/data' }
   ]);
  
- const DefineProd = new webpack.DefinePlugin({'process.env':{NODE_ENV:"'production'"}});
+const DefineProd = new webpack.DefinePlugin({'process.env':{NODE_ENV:"'production'"}});
 
 module.exports = {
   mode: isDevBuild ? 'development' : 'production',
-  cache: true,
+  devtool: "source-map",
+  cache: false,
   watch: true,
   devServer: {
     port: 8181,

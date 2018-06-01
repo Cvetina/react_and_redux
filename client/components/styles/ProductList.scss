@@ -26,6 +26,33 @@
   width: 300px;
   box-shadow: 5px 5px 20px -5px rgba(0,0,0,0.3);
 
+  &:hover  {
+    .productImage {
+      transform: scale(.9);
+
+      &::after {
+        width: 100%;
+        transition-delay: 0s;
+      }
+    
+      & .productImageBorders::after {
+        height: 100%;
+        transition-delay: 0.2s;
+      }
+    
+      &::before {
+        width: 100%;
+        transition-delay: 0.4s;
+      }
+    
+      & .productImageBorders::before {
+        height: 100%;
+        transition-delay: 0.6s;
+      }
+    }
+
+  }
+
   &:nth-child(odd) {
     .productImage {
       order: 2;
@@ -53,7 +80,7 @@
     background-color: $product-sale-bg-color;
     color: $product-sale-color;
     text-align: center;
-    border-bottom: 3px solid $product-image-border-bottom-color;
+    border-bottom: 3px solid $product-image-border-color;
   }
 }
 
@@ -99,7 +126,61 @@
 .productImage {
   max-width: 300px;
   height: 200px;
-  border-bottom: 3px solid $product-image-border-bottom-color;
+  background-size: 100% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  transition: all .5s ease;
+  position: relative;
+
+  &::after, &:before {
+    content:"";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.2s linear;
+    @extend %product-image-gradient;
+
+  }
+  &::after {
+    left: 0;
+    bottom: 0;
+    transition-delay: 0.6s;
+  }
+
+  &::before {
+    right: 0;
+    top: 0;
+    transition-delay: 0.2s;
+  }
+}
+
+.productImageBorders {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: all .2s ease;
+  position: relative;
+
+  &::before {
+    transition-delay: 0s;
+    left: 0;
+    top: 0;
+  }
+
+  &::after { 
+    transition-delay: 0.4s;
+    right: 0;
+    bottom: 0
+  }
+
+  &::before, &::after {
+    content:"";
+    width: 2px;
+    height: 0;
+    position: absolute;
+    transition: all 0.2s linear;
+    @extend %product-image-gradient;
+  }
 }
 
 .title {
@@ -110,6 +191,10 @@
   text-transform: uppercase;
   align-items: center;
   font-size: 16px;
+
+  &:hover svg {
+    animation: bounce .5s ease-in-out;
+  }
 }
 
 .groupTitle {
@@ -129,5 +214,6 @@
 
   &.active svg path {
     stroke: $product-favourite-select-stroke;
+    fill: $product-favourite-select-fill;
   }
 }

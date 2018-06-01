@@ -67,7 +67,9 @@ class ProductListSofa extends React.Component {
                     </span>
                   </button>
                   </span> 
-                  <img className={style.productImage} src={item.image} />
+                  <div className={style.productImage} style={{background: `url(${item.image})`}}>
+                    <span className={style.productImageBorders}></span>
+                  </div>
                   <div className={style.productDescription}>
                     <h4 className={classNames(style.price, { [style.strike]: item.sale})}>
                       {item.price} 

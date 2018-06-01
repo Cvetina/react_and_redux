@@ -23,14 +23,6 @@
 .buttonRemove {
   transition: all .3s ease;
   line-height: 0.8;
-
-  @media (hover:hover) {
-    &:hover {
-      svg path {
-        fill: $product-favourite-icon-hover-color;
-      }
-    }
-  }
 }
 
 .buttonShow {

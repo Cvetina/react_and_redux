@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect, mapStateToProps, mapDispatchToProps } from "react-redux"
 import { NavLink, withRouter } from 'react-router-dom'
+import classNames from "classNames"
 import Home from './shared/Home'
 import Star from './shared/Star'
 import Products from './shared/Products'
@@ -29,7 +30,7 @@ class MainNav extends React.Component {
             <span className={style.icon}><Star /></span>
             <span className={style.text}>Favourites</span>
             {favourites.length > 0 &&
-             <span className={style.favouritesCount}>{favourites.length}</span>
+             <span className={classNames(style.favouritesCount, { [style.active]: favourites.length})}>{favourites.length}</span>
             }
           </NavLink>
         </div>

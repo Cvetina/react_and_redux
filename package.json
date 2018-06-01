@@ -57,5 +57,5 @@
     "dev": "webpack-dev-server",
     "prod": "webpack -p"
   },
-  "homepage": "http://cvetarnica.cvetina.net/"
+  "homepage": "http://cvetina.net/"
 }

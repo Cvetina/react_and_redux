@@ -108,17 +108,20 @@
   5% {
     transform: scale(1.1);
   }
-  39% {
-    transform: scale(0.85);
-  }
   45% {
     transform: scale(1);
   }
-  60% {
-    transform: scale(0.95);
-  }
   100% {
     transform: scale(0.9);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-color: $charcoal;
+  }
+  100% {
+    background-color: $mid-gray;
   }
 }
 
