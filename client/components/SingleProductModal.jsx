@@ -42,6 +42,7 @@ function SingleProductModal(props) {
               <img className={style.sliderImage} src={props.item.image} />
             }
           </MainSlider>
+          <br />
           <p><b>Packages</b>: {props.item.packeges}</p>
           <p><b>Weight</b>: {props.item.weight}</p>
       </Modal.Body>

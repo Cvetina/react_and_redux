@@ -69,10 +69,8 @@ class ProductListKitchen extends React.Component {
                       <Star />
                   </span>
                   </button>
-                  </span> 
-                  <div className={style.productImage} style={{background: `url(${item.image})`}}>
-                    <span className={style.productImageBorders}></span>
-                  </div>
+                  </span>
+                  <img className={style.productImage} src={item.image} />
                   <div className={style.productDescription}>
                     <h4 className={classNames(style.price, { [style.strike]: item.sale})}>
                       {item.price}
@@ -88,7 +86,7 @@ class ProductListKitchen extends React.Component {
                     className={style.buttonShow}
                     onClick={() => this.showSingleProductModal(item)} 
                     >
-                    Show more
+                    <span className={style.buttonShowBorder}>Show more</span>
                   </button>
                   {itemID === item.id &&
                     <SingleProductModal 

@@ -4,7 +4,8 @@ $mid-gray: #595959;
 $paper: #F4F4f4;
 $white: #ffffff;
 $charcoal: #373737;
-$white-transparent-20:  rgba(255, 255, 255, 0.2);
+$white-transparent-20: rgba(255, 255, 255, 0.2);
+$black-transparent-30: rgba(0,0,0,0.3);
 $transparent: rgba(185, 85, 85, 0);
 $red: #ff0303;
 
@@ -30,7 +31,7 @@ $left-sidebar-mobile-icon-bg-color: $paper;
 
 /* product list colors */
 %product-image-gradient {
-    background: linear-gradient(to right, $silk 0%, $mid-gray 100%);
+    background: linear-gradient(to right, $paper 0%, $mid-gray 50%,  $paper 100%);
 }
 
 $product-title-bg-color: $silk; 

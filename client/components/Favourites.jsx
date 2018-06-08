@@ -49,9 +49,8 @@ class Favourites extends React.Component {
                       <Remove />
                     </button>
                   </span> 
-                  <div className={style.productImage} style={{background: `url(${item.image})`}}>
-                    <span className={style.productImageBorders}></span>
-                  </div>
+                  <img className={style.productImage} src={item.image} />
+                  <div className={style.boxShadow}></div>
                   <div className={style.productDescription}>
                     <h3>{item.price}</h3>
                     <h4>{item.material} {item.color}</h4>

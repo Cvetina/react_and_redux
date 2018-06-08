@@ -24,18 +24,21 @@
   @extend %flex-container-column;
   margin: 10px;
   width: 300px;
-  box-shadow: 5px 5px 20px -5px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 20px -5px $black-transparent-30;
 
   &:hover  {
     .productImage {
-      transform: scale(.9);
+      transform: scale(.95);
+    }
+  
+    .buttonShow {
 
       &::after {
         width: 100%;
         transition-delay: 0s;
       }
     
-      & .productImageBorders::after {
+      & .buttonShowBorder::after {
         height: 100%;
         transition-delay: 0.2s;
       }
@@ -45,7 +48,7 @@
         transition-delay: 0.4s;
       }
     
-      & .productImageBorders::before {
+      & .buttonShowBorder::before {
         height: 100%;
         transition-delay: 0.6s;
       }
@@ -105,37 +108,14 @@
 .buttonShow {
   background-color: $product-show-button-bg !important;
   color: $product-show-button-color;
-  border-top: 1px solid $light-gray !important;
-  border-bottom: 1px solid $light-gray !important;
-  padding: 5px;
   transition: all .3s ease;
-
-  @media (hover:hover) {
-    &:hover {
-      background-color: $product-show-button-bg-hover !important;
-      color: $product-show-button-color-hover;
-    }
-  }
-}
-
-.productDescription {
-  background-color: $product-description-bg;
-  padding: 0 10px;
-}
-
-.productImage {
-  max-width: 300px;
-  height: 200px;
-  background-size: 100% !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  transition: all .5s ease;
+  padding: 0;
   position: relative;
 
   &::after, &:before {
     content:"";
     width: 0;
-    height: 2px;
+    height: 1px;
     position: absolute;
     transition: all 0.2s linear;
     @extend %product-image-gradient;
@@ -154,8 +134,10 @@
   }
 }
 
-.productImageBorders {
+.buttonShowBorder {
   display: flex;
+  justify-content: center;
+  padding: 5px;
   width: 100%;
   height: 100%;
   transition: all .2s ease;
@@ -175,12 +157,23 @@
 
   &::before, &::after {
     content:"";
-    width: 2px;
+    width: 1px;
     height: 0;
     position: absolute;
     transition: all 0.2s linear;
     @extend %product-image-gradient;
   }
+}
+
+.productDescription {
+  background-color: $product-description-bg;
+  padding: 0 10px;
+}
+
+.productImage {
+  max-width: 300px;
+  height: 200px;
+  transition: all 0.4s linear;
 }
 
 .title {
